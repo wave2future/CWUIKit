@@ -1,0 +1,655 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A6ED9128136947C4002DCEE4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6ED9127136947C4002DCEE4 /* CoreGraphics.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		A6ED912A136947C4002DCEE4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6ED9129136947C4002DCEE4 /* QuartzCore.framework */; };
+		A6ED912C136947C4002DCEE4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6ED912B136947C4002DCEE4 /* UIKit.framework */; };
+		A6ED9285136959B3002DCEE4 /* libCWFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A6ED9282136959A8002DCEE4 /* libCWFoundation.a */; };
+		A6ED929A13695A14002DCEE4 /* CWAuxiliaryAction.h in Headers */ = {isa = PBXBuildFile; fileRef = A6ED928813695A14002DCEE4 /* CWAuxiliaryAction.h */; };
+		A6ED929B13695A14002DCEE4 /* CWAuxiliaryAction.m in Sources */ = {isa = PBXBuildFile; fileRef = A6ED928913695A14002DCEE4 /* CWAuxiliaryAction.m */; };
+		A6ED929C13695A14002DCEE4 /* CWCalloutView.h in Headers */ = {isa = PBXBuildFile; fileRef = A6ED928A13695A14002DCEE4 /* CWCalloutView.h */; };
+		A6ED929D13695A14002DCEE4 /* CWCalloutView.m in Sources */ = {isa = PBXBuildFile; fileRef = A6ED928B13695A14002DCEE4 /* CWCalloutView.m */; };
+		A6ED929E13695A14002DCEE4 /* CWLinearLayoutView.h in Headers */ = {isa = PBXBuildFile; fileRef = A6ED928C13695A14002DCEE4 /* CWLinearLayoutView.h */; };
+		A6ED929F13695A14002DCEE4 /* CWLinearLayoutView.m in Sources */ = {isa = PBXBuildFile; fileRef = A6ED928D13695A14002DCEE4 /* CWLinearLayoutView.m */; };
+		A6ED92A013695A14002DCEE4 /* CWPrimaryViewWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = A6ED928E13695A14002DCEE4 /* CWPrimaryViewWindow.h */; };
+		A6ED92A113695A14002DCEE4 /* CWPrimaryViewWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = A6ED928F13695A14002DCEE4 /* CWPrimaryViewWindow.m */; };
+		A6ED92A213695A14002DCEE4 /* NSObject+CWNibLocalizations.h in Headers */ = {isa = PBXBuildFile; fileRef = A6ED929013695A14002DCEE4 /* NSObject+CWNibLocalizations.h */; };
+		A6ED92A313695A14002DCEE4 /* NSObject+CWNibLocalizations.m in Sources */ = {isa = PBXBuildFile; fileRef = A6ED929113695A14002DCEE4 /* NSObject+CWNibLocalizations.m */; };
+		A6ED92A413695A14002DCEE4 /* UIAlertView+CWErrorHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = A6ED929213695A14002DCEE4 /* UIAlertView+CWErrorHandler.h */; };
+		A6ED92A513695A14002DCEE4 /* UIAlertView+CWErrorHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = A6ED929313695A14002DCEE4 /* UIAlertView+CWErrorHandler.m */; };
+		A6ED92A613695A14002DCEE4 /* UIDevice+CWCapabilities.h in Headers */ = {isa = PBXBuildFile; fileRef = A6ED929413695A14002DCEE4 /* UIDevice+CWCapabilities.h */; };
+		A6ED92A713695A14002DCEE4 /* UIDevice+CWCapabilities.m in Sources */ = {isa = PBXBuildFile; fileRef = A6ED929513695A14002DCEE4 /* UIDevice+CWCapabilities.m */; };
+		A6ED92A813695A14002DCEE4 /* UIImage+CWResize.h in Headers */ = {isa = PBXBuildFile; fileRef = A6ED929613695A14002DCEE4 /* UIImage+CWResize.h */; };
+		A6ED92A913695A14002DCEE4 /* UIImage+CWResize.m in Sources */ = {isa = PBXBuildFile; fileRef = A6ED929713695A14002DCEE4 /* UIImage+CWResize.m */; };
+		A6ED92AA13695A14002DCEE4 /* UIViewController+CWPopover.h in Headers */ = {isa = PBXBuildFile; fileRef = A6ED929813695A14002DCEE4 /* UIViewController+CWPopover.h */; };
+		A6ED92AB13695A14002DCEE4 /* UIViewController+CWPopover.m in Sources */ = {isa = PBXBuildFile; fileRef = A6ED929913695A14002DCEE4 /* UIViewController+CWPopover.m */; };
+		A6ED92B213695A2A002DCEE4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A6ED92AE13695A2A002DCEE4 /* main.m */; };
+		A6ED92B313695A2A002DCEE4 /* SampleAppAppDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = A6ED92B013695A2A002DCEE4 /* SampleAppAppDelegate.h */; };
+		A6ED92B413695A2A002DCEE4 /* SampleAppAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6ED92B113695A2A002DCEE4 /* SampleAppAppDelegate.m */; };
+		A6ED92BF13695A73002DCEE4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A6ED92AE13695A2A002DCEE4 /* main.m */; };
+		A6ED92C013695A73002DCEE4 /* SampleAppAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6ED92B113695A2A002DCEE4 /* SampleAppAppDelegate.m */; };
+		A6ED92C113695A78002DCEE4 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6ED92AF13695A2A002DCEE4 /* MainWindow.xib */; };
+		A6ED92C413695A97002DCEE4 /* libCWUIKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AAC07E0554694100DB518D /* libCWUIKit.a */; };
+		A6ED92C513695AA4002DCEE4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
+		A6ED92C613695AA4002DCEE4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6ED9127136947C4002DCEE4 /* CoreGraphics.framework */; };
+		A6ED92C713695AA4002DCEE4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6ED9129136947C4002DCEE4 /* QuartzCore.framework */; };
+		A6ED92C813695AA4002DCEE4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6ED912B136947C4002DCEE4 /* UIKit.framework */; };
+		A6ED92FD13695C75002DCEE4 /* CWUIKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A6ED92ED13695BD3002DCEE4 /* CWUIKitResources.bundle */; };
+		A6ED932013695CF9002DCEE4 /* calloutview_left.png in Resources */ = {isa = PBXBuildFile; fileRef = A6ED92F513695C35002DCEE4 /* calloutview_left.png */; };
+		A6ED932113695CF9002DCEE4 /* calloutview_left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A6ED92F613695C35002DCEE4 /* calloutview_left@2x.png */; };
+		A6ED932213695CF9002DCEE4 /* calloutview_middle.png in Resources */ = {isa = PBXBuildFile; fileRef = A6ED92F713695C35002DCEE4 /* calloutview_middle.png */; };
+		A6ED932313695CF9002DCEE4 /* calloutview_middle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A6ED92F813695C35002DCEE4 /* calloutview_middle@2x.png */; };
+		A6ED932413695CF9002DCEE4 /* calloutview_right.png in Resources */ = {isa = PBXBuildFile; fileRef = A6ED92F913695C35002DCEE4 /* calloutview_right.png */; };
+		A6ED932513695CF9002DCEE4 /* calloutview_right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A6ED92FA13695C35002DCEE4 /* calloutview_right@2x.png */; };
+		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A6ED9281136959A8002DCEE4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A6ED9279136959A8002DCEE4 /* CWFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteInfo = CWFoundation;
+		};
+		A6ED9283136959A8002DCEE4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A6ED9279136959A8002DCEE4 /* CWFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A6ED914F13694AD8002DCEE4;
+			remoteInfo = UnitTests;
+		};
+		A6ED9286136959BB002DCEE4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A6ED9279136959A8002DCEE4 /* CWFoundation.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = CWFoundation;
+		};
+		A6ED92C213695A85002DCEE4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = CWUIKit;
+		};
+		A6ED92FB13695C69002DCEE4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A6ED92EC13695BD3002DCEE4;
+			remoteInfo = CWUIKitResources;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A6ED907E1369476D002DCEE4 /* README */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		A6ED9127136947C4002DCEE4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A6ED9129136947C4002DCEE4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		A6ED912B136947C4002DCEE4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A6ED9279136959A8002DCEE4 /* CWFoundation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CWFoundation.xcodeproj; path = Components/CWFoundation/CWFoundation.xcodeproj; sourceTree = "<group>"; };
+		A6ED928813695A14002DCEE4 /* CWAuxiliaryAction.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; name = CWAuxiliaryAction.h; path = Classes/CWAuxiliaryAction.h; sourceTree = "<group>"; };
+		A6ED928913695A14002DCEE4 /* CWAuxiliaryAction.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; name = CWAuxiliaryAction.m; path = Classes/CWAuxiliaryAction.m; sourceTree = "<group>"; };
+		A6ED928A13695A14002DCEE4 /* CWCalloutView.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; name = CWCalloutView.h; path = Classes/CWCalloutView.h; sourceTree = "<group>"; };
+		A6ED928B13695A14002DCEE4 /* CWCalloutView.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; name = CWCalloutView.m; path = Classes/CWCalloutView.m; sourceTree = "<group>"; };
+		A6ED928C13695A14002DCEE4 /* CWLinearLayoutView.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; name = CWLinearLayoutView.h; path = Classes/CWLinearLayoutView.h; sourceTree = "<group>"; };
+		A6ED928D13695A14002DCEE4 /* CWLinearLayoutView.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; name = CWLinearLayoutView.m; path = Classes/CWLinearLayoutView.m; sourceTree = "<group>"; };
+		A6ED928E13695A14002DCEE4 /* CWPrimaryViewWindow.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; name = CWPrimaryViewWindow.h; path = Classes/CWPrimaryViewWindow.h; sourceTree = "<group>"; };
+		A6ED928F13695A14002DCEE4 /* CWPrimaryViewWindow.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; name = CWPrimaryViewWindow.m; path = Classes/CWPrimaryViewWindow.m; sourceTree = "<group>"; };
+		A6ED929013695A14002DCEE4 /* NSObject+CWNibLocalizations.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; name = "NSObject+CWNibLocalizations.h"; path = "Classes/NSObject+CWNibLocalizations.h"; sourceTree = "<group>"; };
+		A6ED929113695A14002DCEE4 /* NSObject+CWNibLocalizations.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; name = "NSObject+CWNibLocalizations.m"; path = "Classes/NSObject+CWNibLocalizations.m"; sourceTree = "<group>"; };
+		A6ED929213695A14002DCEE4 /* UIAlertView+CWErrorHandler.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; name = "UIAlertView+CWErrorHandler.h"; path = "Classes/UIAlertView+CWErrorHandler.h"; sourceTree = "<group>"; };
+		A6ED929313695A14002DCEE4 /* UIAlertView+CWErrorHandler.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; name = "UIAlertView+CWErrorHandler.m"; path = "Classes/UIAlertView+CWErrorHandler.m"; sourceTree = "<group>"; };
+		A6ED929413695A14002DCEE4 /* UIDevice+CWCapabilities.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; name = "UIDevice+CWCapabilities.h"; path = "Classes/UIDevice+CWCapabilities.h"; sourceTree = "<group>"; };
+		A6ED929513695A14002DCEE4 /* UIDevice+CWCapabilities.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; name = "UIDevice+CWCapabilities.m"; path = "Classes/UIDevice+CWCapabilities.m"; sourceTree = "<group>"; };
+		A6ED929613695A14002DCEE4 /* UIImage+CWResize.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; name = "UIImage+CWResize.h"; path = "Classes/UIImage+CWResize.h"; sourceTree = "<group>"; };
+		A6ED929713695A14002DCEE4 /* UIImage+CWResize.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; name = "UIImage+CWResize.m"; path = "Classes/UIImage+CWResize.m"; sourceTree = "<group>"; };
+		A6ED929813695A14002DCEE4 /* UIViewController+CWPopover.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; name = "UIViewController+CWPopover.h"; path = "Classes/UIViewController+CWPopover.h"; sourceTree = "<group>"; };
+		A6ED929913695A14002DCEE4 /* UIViewController+CWPopover.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+CWPopover.m"; path = "Classes/UIViewController+CWPopover.m"; sourceTree = "<group>"; };
+		A6ED92AD13695A2A002DCEE4 /* CalloutViewSampleApp-Info.plist */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text.plist.xml; path = "CalloutViewSampleApp-Info.plist"; sourceTree = "<group>"; };
+		A6ED92AE13695A2A002DCEE4 /* main.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A6ED92AF13695A2A002DCEE4 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		A6ED92B013695A2A002DCEE4 /* SampleAppAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; path = SampleAppAppDelegate.h; sourceTree = "<group>"; };
+		A6ED92B113695A2A002DCEE4 /* SampleAppAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; path = SampleAppAppDelegate.m; sourceTree = "<group>"; };
+		A6ED92B913695A43002DCEE4 /* CalloutViewSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalloutViewSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6ED92ED13695BD3002DCEE4 /* CWUIKitResources.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CWUIKitResources.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6ED92F513695C35002DCEE4 /* calloutview_left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = calloutview_left.png; path = Resources/calloutview_left.png; sourceTree = "<group>"; };
+		A6ED92F613695C35002DCEE4 /* calloutview_left@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "calloutview_left@2x.png"; path = "Resources/calloutview_left@2x.png"; sourceTree = "<group>"; };
+		A6ED92F713695C35002DCEE4 /* calloutview_middle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = calloutview_middle.png; path = Resources/calloutview_middle.png; sourceTree = "<group>"; };
+		A6ED92F813695C35002DCEE4 /* calloutview_middle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "calloutview_middle@2x.png"; path = "Resources/calloutview_middle@2x.png"; sourceTree = "<group>"; };
+		A6ED92F913695C35002DCEE4 /* calloutview_right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = calloutview_right.png; path = Resources/calloutview_right.png; sourceTree = "<group>"; };
+		A6ED92FA13695C35002DCEE4 /* calloutview_right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "calloutview_right@2x.png"; path = "Resources/calloutview_right@2x.png"; sourceTree = "<group>"; };
+		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D2AAC07E0554694100DB518D /* libCWUIKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCWUIKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A6ED92B713695A43002DCEE4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6ED92C513695AA4002DCEE4 /* Foundation.framework in Frameworks */,
+				A6ED92C613695AA4002DCEE4 /* CoreGraphics.framework in Frameworks */,
+				A6ED92C713695AA4002DCEE4 /* QuartzCore.framework in Frameworks */,
+				A6ED92C813695AA4002DCEE4 /* UIKit.framework in Frameworks */,
+				A6ED92C413695A97002DCEE4 /* libCWUIKit.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2AAC07C0554694100DB518D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */,
+				A6ED9128136947C4002DCEE4 /* CoreGraphics.framework in Frameworks */,
+				A6ED912A136947C4002DCEE4 /* QuartzCore.framework in Frameworks */,
+				A6ED912C136947C4002DCEE4 /* UIKit.framework in Frameworks */,
+				A6ED9285136959B3002DCEE4 /* libCWFoundation.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034768DFFF38A50411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2AAC07E0554694100DB518D /* libCWUIKit.a */,
+				A6ED92B913695A43002DCEE4 /* CalloutViewSampleApp.app */,
+				A6ED92ED13695BD3002DCEE4 /* CWUIKitResources.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0867D691FE84028FC02AAC07 /* CWUIKit */ = {
+			isa = PBXGroup;
+			children = (
+				A6ED907E1369476D002DCEE4 /* README */,
+				A6ED9279136959A8002DCEE4 /* CWFoundation.xcodeproj */,
+				08FB77AEFE84172EC02AAC07 /* Classes */,
+				A6ED92F413695C1E002DCEE4 /* Resources */,
+				A6ED90171369470A002DCEE4 /* Test Classes */,
+				A6ED901A13694715002DCEE4 /* Sample Classes */,
+				0867D69AFE84028FC02AAC07 /* Frameworks */,
+				034768DFFF38A50411DB9C8B /* Products */,
+			);
+			name = CWUIKit;
+			sourceTree = "<group>";
+		};
+		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AACBBE490F95108600F1A2B1 /* Foundation.framework */,
+				A6ED9127136947C4002DCEE4 /* CoreGraphics.framework */,
+				A6ED9129136947C4002DCEE4 /* QuartzCore.framework */,
+				A6ED912B136947C4002DCEE4 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		08FB77AEFE84172EC02AAC07 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A6ED928813695A14002DCEE4 /* CWAuxiliaryAction.h */,
+				A6ED928913695A14002DCEE4 /* CWAuxiliaryAction.m */,
+				A6ED928A13695A14002DCEE4 /* CWCalloutView.h */,
+				A6ED928B13695A14002DCEE4 /* CWCalloutView.m */,
+				A6ED928C13695A14002DCEE4 /* CWLinearLayoutView.h */,
+				A6ED928D13695A14002DCEE4 /* CWLinearLayoutView.m */,
+				A6ED928E13695A14002DCEE4 /* CWPrimaryViewWindow.h */,
+				A6ED928F13695A14002DCEE4 /* CWPrimaryViewWindow.m */,
+				A6ED929013695A14002DCEE4 /* NSObject+CWNibLocalizations.h */,
+				A6ED929113695A14002DCEE4 /* NSObject+CWNibLocalizations.m */,
+				A6ED929213695A14002DCEE4 /* UIAlertView+CWErrorHandler.h */,
+				A6ED929313695A14002DCEE4 /* UIAlertView+CWErrorHandler.m */,
+				A6ED929413695A14002DCEE4 /* UIDevice+CWCapabilities.h */,
+				A6ED929513695A14002DCEE4 /* UIDevice+CWCapabilities.m */,
+				A6ED929613695A14002DCEE4 /* UIImage+CWResize.h */,
+				A6ED929713695A14002DCEE4 /* UIImage+CWResize.m */,
+				A6ED929813695A14002DCEE4 /* UIViewController+CWPopover.h */,
+				A6ED929913695A14002DCEE4 /* UIViewController+CWPopover.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		A6ED90171369470A002DCEE4 /* Test Classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Test Classes";
+			sourceTree = "<group>";
+		};
+		A6ED901A13694715002DCEE4 /* Sample Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A6ED92AC13695A2A002DCEE4 /* CalloutView */,
+			);
+			name = "Sample Classes";
+			sourceTree = "<group>";
+		};
+		A6ED927A136959A8002DCEE4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A6ED9282136959A8002DCEE4 /* libCWFoundation.a */,
+				A6ED9284136959A8002DCEE4 /* UnitTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A6ED92AC13695A2A002DCEE4 /* CalloutView */ = {
+			isa = PBXGroup;
+			children = (
+				A6ED92AD13695A2A002DCEE4 /* CalloutViewSampleApp-Info.plist */,
+				A6ED92AE13695A2A002DCEE4 /* main.m */,
+				A6ED92B013695A2A002DCEE4 /* SampleAppAppDelegate.h */,
+				A6ED92B113695A2A002DCEE4 /* SampleAppAppDelegate.m */,
+				A6ED92AF13695A2A002DCEE4 /* MainWindow.xib */,
+			);
+			name = CalloutView;
+			path = "Sample Classes/CalloutView";
+			sourceTree = "<group>";
+		};
+		A6ED92F413695C1E002DCEE4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A6ED92F513695C35002DCEE4 /* calloutview_left.png */,
+				A6ED92F613695C35002DCEE4 /* calloutview_left@2x.png */,
+				A6ED92F713695C35002DCEE4 /* calloutview_middle.png */,
+				A6ED92F813695C35002DCEE4 /* calloutview_middle@2x.png */,
+				A6ED92F913695C35002DCEE4 /* calloutview_right.png */,
+				A6ED92FA13695C35002DCEE4 /* calloutview_right@2x.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D2AAC07A0554694100DB518D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6ED929A13695A14002DCEE4 /* CWAuxiliaryAction.h in Headers */,
+				A6ED929C13695A14002DCEE4 /* CWCalloutView.h in Headers */,
+				A6ED929E13695A14002DCEE4 /* CWLinearLayoutView.h in Headers */,
+				A6ED92A013695A14002DCEE4 /* CWPrimaryViewWindow.h in Headers */,
+				A6ED92A213695A14002DCEE4 /* NSObject+CWNibLocalizations.h in Headers */,
+				A6ED92A413695A14002DCEE4 /* UIAlertView+CWErrorHandler.h in Headers */,
+				A6ED92A613695A14002DCEE4 /* UIDevice+CWCapabilities.h in Headers */,
+				A6ED92A813695A14002DCEE4 /* UIImage+CWResize.h in Headers */,
+				A6ED92AA13695A14002DCEE4 /* UIViewController+CWPopover.h in Headers */,
+				A6ED92B313695A2A002DCEE4 /* SampleAppAppDelegate.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		A6ED92B813695A43002DCEE4 /* CalloutViewSampleApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A6ED92BE13695A44002DCEE4 /* Build configuration list for PBXNativeTarget "CalloutViewSampleApp" */;
+			buildPhases = (
+				A6ED92B513695A43002DCEE4 /* Resources */,
+				A6ED92B613695A43002DCEE4 /* Sources */,
+				A6ED92B713695A43002DCEE4 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A6ED92C313695A85002DCEE4 /* PBXTargetDependency */,
+			);
+			name = CalloutViewSampleApp;
+			productName = CalloutViewSampleApp;
+			productReference = A6ED92B913695A43002DCEE4 /* CalloutViewSampleApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A6ED92EC13695BD3002DCEE4 /* CWUIKitResources */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A6ED92F113695BD3002DCEE4 /* Build configuration list for PBXNativeTarget "CWUIKitResources" */;
+			buildPhases = (
+				A6ED92E913695BD3002DCEE4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CWUIKitResources;
+			productName = CWUIKitResources;
+			productReference = A6ED92ED13695BD3002DCEE4 /* CWUIKitResources.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		D2AAC07D0554694100DB518D /* CWUIKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "CWUIKit" */;
+			buildPhases = (
+				D2AAC07A0554694100DB518D /* Headers */,
+				D2AAC07B0554694100DB518D /* Sources */,
+				D2AAC07C0554694100DB518D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A6ED9287136959BB002DCEE4 /* PBXTargetDependency */,
+				A6ED92FC13695C69002DCEE4 /* PBXTargetDependency */,
+			);
+			name = CWUIKit;
+			productName = CWUIKit;
+			productReference = D2AAC07E0554694100DB518D /* libCWUIKit.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0867D690FE84028FC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "CWUIKit" */;
+			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 0867D691FE84028FC02AAC07 /* CWUIKit */;
+			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = A6ED927A136959A8002DCEE4 /* Products */;
+					ProjectRef = A6ED9279136959A8002DCEE4 /* CWFoundation.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				A6ED92EC13695BD3002DCEE4 /* CWUIKitResources */,
+				D2AAC07D0554694100DB518D /* CWUIKit */,
+				A6ED92B813695A43002DCEE4 /* CalloutViewSampleApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		A6ED9282136959A8002DCEE4 /* libCWFoundation.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libCWFoundation.a;
+			remoteRef = A6ED9281136959A8002DCEE4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A6ED9284136959A8002DCEE4 /* UnitTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = UnitTests.octest;
+			remoteRef = A6ED9283136959A8002DCEE4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A6ED92B513695A43002DCEE4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6ED92FD13695C75002DCEE4 /* CWUIKitResources.bundle in Resources */,
+				A6ED92C113695A78002DCEE4 /* MainWindow.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6ED92E913695BD3002DCEE4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6ED932013695CF9002DCEE4 /* calloutview_left.png in Resources */,
+				A6ED932113695CF9002DCEE4 /* calloutview_left@2x.png in Resources */,
+				A6ED932213695CF9002DCEE4 /* calloutview_middle.png in Resources */,
+				A6ED932313695CF9002DCEE4 /* calloutview_middle@2x.png in Resources */,
+				A6ED932413695CF9002DCEE4 /* calloutview_right.png in Resources */,
+				A6ED932513695CF9002DCEE4 /* calloutview_right@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A6ED92B613695A43002DCEE4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6ED92BF13695A73002DCEE4 /* main.m in Sources */,
+				A6ED92C013695A73002DCEE4 /* SampleAppAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2AAC07B0554694100DB518D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6ED929B13695A14002DCEE4 /* CWAuxiliaryAction.m in Sources */,
+				A6ED929D13695A14002DCEE4 /* CWCalloutView.m in Sources */,
+				A6ED929F13695A14002DCEE4 /* CWLinearLayoutView.m in Sources */,
+				A6ED92A113695A14002DCEE4 /* CWPrimaryViewWindow.m in Sources */,
+				A6ED92A313695A14002DCEE4 /* NSObject+CWNibLocalizations.m in Sources */,
+				A6ED92A513695A14002DCEE4 /* UIAlertView+CWErrorHandler.m in Sources */,
+				A6ED92A713695A14002DCEE4 /* UIDevice+CWCapabilities.m in Sources */,
+				A6ED92A913695A14002DCEE4 /* UIImage+CWResize.m in Sources */,
+				A6ED92AB13695A14002DCEE4 /* UIViewController+CWPopover.m in Sources */,
+				A6ED92B213695A2A002DCEE4 /* main.m in Sources */,
+				A6ED92B413695A2A002DCEE4 /* SampleAppAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A6ED9287136959BB002DCEE4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CWFoundation;
+			targetProxy = A6ED9286136959BB002DCEE4 /* PBXContainerItemProxy */;
+		};
+		A6ED92C313695A85002DCEE4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D2AAC07D0554694100DB518D /* CWUIKit */;
+			targetProxy = A6ED92C213695A85002DCEE4 /* PBXContainerItemProxy */;
+		};
+		A6ED92FC13695C69002DCEE4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A6ED92EC13695BD3002DCEE4 /* CWUIKitResources */;
+			targetProxy = A6ED92FB13695C69002DCEE4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB921F08733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/CWUIKit.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = CWUIKit;
+			};
+			name = Debug;
+		};
+		1DEB922008733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				DSTROOT = /tmp/CWUIKit.dst;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = CWUIKit;
+			};
+			name = Release;
+		};
+		1DEB922308733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
+				PREBINDING = NO;
+				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "Components/**";
+			};
+			name = Debug;
+		};
+		1DEB922408733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
+				PREBINDING = NO;
+				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "Components/**";
+			};
+			name = Release;
+		};
+		A6ED92BC13695A44002DCEE4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/UIKit.framework/Headers/UIKit.h";
+				INFOPLIST_FILE = "Sample Classes/CalloutView/CalloutViewSampleApp-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					UIKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = CalloutViewSampleApp;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A6ED92BD13695A44002DCEE4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/UIKit.framework/Headers/UIKit.h";
+				INFOPLIST_FILE = "Sample Classes/CalloutView/CalloutViewSampleApp-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					UIKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = CalloutViewSampleApp;
+				SDKROOT = iphoneos;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		A6ED92EF13695BD3002DCEE4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				PRODUCT_NAME = CWUIKitResources;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		A6ED92F013695BD3002DCEE4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				PRODUCT_NAME = CWUIKitResources;
+				WRAPPER_EXTENSION = bundle;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "CWUIKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB921F08733DC00010E9CD /* Debug */,
+				1DEB922008733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "CWUIKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB922308733DC00010E9CD /* Debug */,
+				1DEB922408733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A6ED92BE13695A44002DCEE4 /* Build configuration list for PBXNativeTarget "CalloutViewSampleApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A6ED92BC13695A44002DCEE4 /* Debug */,
+				A6ED92BD13695A44002DCEE4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A6ED92F113695BD3002DCEE4 /* Build configuration list for PBXNativeTarget "CWUIKitResources" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A6ED92EF13695BD3002DCEE4 /* Debug */,
+				A6ED92F013695BD3002DCEE4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
+}
