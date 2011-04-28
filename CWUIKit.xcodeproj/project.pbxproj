@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A6A42D56136988B00051E0C7 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6A42D55136988B00051E0C7 /* OpenGLES.framework */; };
 		A6ED9128136947C4002DCEE4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6ED9127136947C4002DCEE4 /* CoreGraphics.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		A6ED912A136947C4002DCEE4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6ED9129136947C4002DCEE4 /* QuartzCore.framework */; };
 		A6ED912C136947C4002DCEE4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6ED912B136947C4002DCEE4 /* UIKit.framework */; };
-		A6ED9285136959B3002DCEE4 /* libCWFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A6ED9282136959A8002DCEE4 /* libCWFoundation.a */; };
+		A6ED9285136959B3002DCEE4 /* libCWFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A6ED9282136959A8002DCEE4 /* libCWFoundation.a */; settings = {ATTRIBUTES = (Weak, ); }; };
 		A6ED929A13695A14002DCEE4 /* CWAuxiliaryAction.h in Headers */ = {isa = PBXBuildFile; fileRef = A6ED928813695A14002DCEE4 /* CWAuxiliaryAction.h */; };
 		A6ED929B13695A14002DCEE4 /* CWAuxiliaryAction.m in Sources */ = {isa = PBXBuildFile; fileRef = A6ED928913695A14002DCEE4 /* CWAuxiliaryAction.m */; };
 		A6ED929C13695A14002DCEE4 /* CWCalloutView.h in Headers */ = {isa = PBXBuildFile; fileRef = A6ED928A13695A14002DCEE4 /* CWCalloutView.h */; };
@@ -29,9 +30,7 @@
 		A6ED92A913695A14002DCEE4 /* UIImage+CWResize.m in Sources */ = {isa = PBXBuildFile; fileRef = A6ED929713695A14002DCEE4 /* UIImage+CWResize.m */; };
 		A6ED92AA13695A14002DCEE4 /* UIViewController+CWPopover.h in Headers */ = {isa = PBXBuildFile; fileRef = A6ED929813695A14002DCEE4 /* UIViewController+CWPopover.h */; };
 		A6ED92AB13695A14002DCEE4 /* UIViewController+CWPopover.m in Sources */ = {isa = PBXBuildFile; fileRef = A6ED929913695A14002DCEE4 /* UIViewController+CWPopover.m */; };
-		A6ED92B213695A2A002DCEE4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A6ED92AE13695A2A002DCEE4 /* main.m */; };
 		A6ED92B313695A2A002DCEE4 /* SampleAppAppDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = A6ED92B013695A2A002DCEE4 /* SampleAppAppDelegate.h */; };
-		A6ED92B413695A2A002DCEE4 /* SampleAppAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6ED92B113695A2A002DCEE4 /* SampleAppAppDelegate.m */; };
 		A6ED92BF13695A73002DCEE4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A6ED92AE13695A2A002DCEE4 /* main.m */; };
 		A6ED92C013695A73002DCEE4 /* SampleAppAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6ED92B113695A2A002DCEE4 /* SampleAppAppDelegate.m */; };
 		A6ED92C113695A78002DCEE4 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6ED92AF13695A2A002DCEE4 /* MainWindow.xib */; };
@@ -89,6 +88,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A6A42D55136988B00051E0C7 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		A6ED907E1369476D002DCEE4 /* README */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		A6ED9127136947C4002DCEE4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		A6ED9129136947C4002DCEE4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -151,6 +151,7 @@
 				A6ED912A136947C4002DCEE4 /* QuartzCore.framework in Frameworks */,
 				A6ED912C136947C4002DCEE4 /* UIKit.framework in Frameworks */,
 				A6ED9285136959B3002DCEE4 /* libCWFoundation.a in Frameworks */,
+				A6A42D56136988B00051E0C7 /* OpenGLES.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,6 +186,7 @@
 		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A6A42D55136988B00051E0C7 /* OpenGLES.framework */,
 				AACBBE490F95108600F1A2B1 /* Foundation.framework */,
 				A6ED9127136947C4002DCEE4 /* CoreGraphics.framework */,
 				A6ED9129136947C4002DCEE4 /* QuartzCore.framework */,
@@ -441,8 +443,6 @@
 				A6ED92A713695A14002DCEE4 /* UIDevice+CWCapabilities.m in Sources */,
 				A6ED92A913695A14002DCEE4 /* UIImage+CWResize.m in Sources */,
 				A6ED92AB13695A14002DCEE4 /* UIViewController+CWPopover.m in Sources */,
-				A6ED92B213695A2A002DCEE4 /* main.m in Sources */,
-				A6ED92B413695A2A002DCEE4 /* SampleAppAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
