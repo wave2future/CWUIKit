@@ -47,6 +47,8 @@
 		A6ED932313695CF9002DCEE4 /* calloutview_middle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A6ED92F813695C35002DCEE4 /* calloutview_middle@2x.png */; };
 		A6ED932413695CF9002DCEE4 /* calloutview_right.png in Resources */ = {isa = PBXBuildFile; fileRef = A6ED92F913695C35002DCEE4 /* calloutview_right.png */; };
 		A6ED932513695CF9002DCEE4 /* calloutview_right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A6ED92FA13695C35002DCEE4 /* calloutview_right@2x.png */; };
+		A6FF9FA21369A3FD0083F2EC /* UIActionSheet+AuxiliaryAction.m in Sources */ = {isa = PBXBuildFile; fileRef = A6FF9FA01369A3FD0083F2EC /* UIActionSheet+AuxiliaryAction.m */; };
+		A6FF9FA31369A3FD0083F2EC /* UIAlertView+AuxiliaryAction.m in Sources */ = {isa = PBXBuildFile; fileRef = A6FF9FA11369A3FD0083F2EC /* UIAlertView+AuxiliaryAction.m */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
 
@@ -125,6 +127,8 @@
 		A6ED92F813695C35002DCEE4 /* calloutview_middle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "calloutview_middle@2x.png"; path = "Resources/calloutview_middle@2x.png"; sourceTree = "<group>"; };
 		A6ED92F913695C35002DCEE4 /* calloutview_right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = calloutview_right.png; path = Resources/calloutview_right.png; sourceTree = "<group>"; };
 		A6ED92FA13695C35002DCEE4 /* calloutview_right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "calloutview_right@2x.png"; path = "Resources/calloutview_right@2x.png"; sourceTree = "<group>"; };
+		A6FF9FA01369A3FD0083F2EC /* UIActionSheet+AuxiliaryAction.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; name = "UIActionSheet+AuxiliaryAction.m"; path = "Classes/UIActionSheet+AuxiliaryAction.m"; sourceTree = "<group>"; };
+		A6FF9FA11369A3FD0083F2EC /* UIAlertView+AuxiliaryAction.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; name = "UIAlertView+AuxiliaryAction.m"; path = "Classes/UIAlertView+AuxiliaryAction.m"; sourceTree = "<group>"; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D2AAC07E0554694100DB518D /* libCWUIKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCWUIKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -198,6 +202,8 @@
 			children = (
 				A6ED928813695A14002DCEE4 /* CWAuxiliaryAction.h */,
 				A6ED928913695A14002DCEE4 /* CWAuxiliaryAction.m */,
+				A6FF9FA01369A3FD0083F2EC /* UIActionSheet+AuxiliaryAction.m */,
+				A6FF9FA11369A3FD0083F2EC /* UIAlertView+AuxiliaryAction.m */,
 				A6ED928A13695A14002DCEE4 /* CWCalloutView.h */,
 				A6ED928B13695A14002DCEE4 /* CWCalloutView.m */,
 				A6ED928C13695A14002DCEE4 /* CWLinearLayoutView.h */,
@@ -443,6 +449,8 @@
 				A6ED92AB13695A14002DCEE4 /* UIViewController+CWPopover.m in Sources */,
 				A6ED92B213695A2A002DCEE4 /* main.m in Sources */,
 				A6ED92B413695A2A002DCEE4 /* SampleAppAppDelegate.m in Sources */,
+				A6FF9FA21369A3FD0083F2EC /* UIActionSheet+AuxiliaryAction.m in Sources */,
+				A6FF9FA31369A3FD0083F2EC /* UIAlertView+AuxiliaryAction.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
