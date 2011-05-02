@@ -12,7 +12,7 @@
 //     * Redistributions in binary form must reproduce the above copyright
 //       notice, this list of conditions and the following disclaimer in the
 //       documentation and/or other materials provided with the distribution.
-//     * Neither the name of the Jayway nor the names of its contributors may 
+//     * Neither the name of Jayway AB nor the names of its contributors may 
 //       be used to endorse or promote products derived from this software 
 //       without specific prior written permission.
 //
@@ -28,12 +28,15 @@
 //  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 
+#import "CWGeometry.h"
 #import "CWAuxiliaryAction.h"
 #import "CWCalloutView.h"
 #import "CWLinearLayoutView.h"
 #import "CWPrimaryViewWindow.h"
 #import "NSObject+CWNibLocalizations.h"
 #import "UIAlertView+CWErrorHandler.h"
+#import "UIColor+CWAdditions.h"
 #import "UIDevice+CWCapabilities.h"
-#import "UIImage+CWResize.h"
+#import "UIImage+CWAdditions.h"
+#import "UIView+CWVisualCue.h"
 #import "UIViewController+CWPopover.h"

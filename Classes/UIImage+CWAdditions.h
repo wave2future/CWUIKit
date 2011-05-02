@@ -1,5 +1,5 @@
 //
-//  UIAlertView+CWErrorHandler.h
+//  UIImage+CWResize.h
 //  CWUIKit
 //  Created by Fredrik Olsson 
 //
@@ -29,20 +29,29 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
 
-@interface UIAlertView (CWErrorHandler)
+@interface UIImage (CWResize)
+
+-(UIImage*)imageByResizingToFitSize:(CGSize)size scaleUpIfNeeded:(BOOL)scaleUp;
+
+-(UIImage*)imageByApsectFillToSize:(CGSize)size withInset:(UIEdgeInsets)insets;
+
+-(UIImage*)imageCroppedToSquareWithSide:(CGFloat)sideLength;
+
+@end
+
+
+@interface UIImage (CWNormalization)
 
 /*!
- * @abstract Return an UIAlertView that can respond to an error.
+ * @abstract Returns the image with normalized rotation.
  *
- * @description The error must contain localized description and reson.
- * 				Will present buttons for recovery options if error also
- *				contains a recovery attempter and recovery options.
- *				The last recovery option is always asumed to be the 
- *				safe "Cancel" option.
- *				The recovery atempter must be able to handle optionIndex equal
- *				to NSNotFound, it sent if an alert view is cancelled by the system.
+ * @discussion An mage may contain meta data for rotations, this rotation is not
+ *			   respected when saving an image to file system as JPG or PNG.
+ *			   This method creates a new image that is correctly rotated without 
+ *			   meta-data if needed.
  */
-+(UIAlertView*)alertViewWithError:(NSError*)error;
+-(UIImage*)normalizedImage;
 
 @end

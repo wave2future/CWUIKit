@@ -1,5 +1,5 @@
 //
-//  UIImage+CWResize.h
+//  UIColor+CWAdditions.h
 //  CWUIKit
 //  Created by Fredrik Olsson 
 //
@@ -12,7 +12,7 @@
 //     * Redistributions in binary form must reproduce the above copyright
 //       notice, this list of conditions and the following disclaimer in the
 //       documentation and/or other materials provided with the distribution.
-//     * Neither the name of the Jayway nor the names of its contributors may 
+//     * Neither the name of Jayway AB nor the names of its contributors may 
 //       be used to endorse or promote products derived from this software 
 //       without specific prior written permission.
 //
@@ -29,14 +29,41 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <QuartzCore/QuartzCore.h>
 
-@interface UIImage (CWResize)
+@interface UIColor (CWAdditions)
 
--(UIImage*)imageByResizingToFitSize:(CGSize)size scaleUpIfNeeded:(BOOL)scaleUp;
+@property(nonatomic, readonly) CGColorSpaceModel colorSpaceModel;
 
--(UIImage*)imageByApsectFillToSize:(CGSize)size withInset:(UIEdgeInsets)insets;
+-(UIColor*)colorByBlendingWithColor:(UIColor*)color fraction:(CGFloat)fraction;
+-(UIColor*)colorByAddingColor:(UIColor*)color;
+-(UIColor*)colorByMultiplyingColor:(UIColor*)color;
 
--(UIImage*)imageCroppedToSquareWithSide:(CGFloat)sideLength;
+@property(nonatomic, readonly) CGFloat alpha; 
+
+-(BOOL)canProvideRGBComponents;
+-(void)getRGBA:(CGFloat[4])pRGBA;
+@property(nonatomic, readonly) CGFloat red; 
+@property(nonatomic, readonly) CGFloat green; 
+@property(nonatomic, readonly) CGFloat blue; 
+
+-(BOOL)canProvideHSVComponents;
+-(void)getHSVA:(CGFloat[4])pHSVA;
+@property (nonatomic, readonly) CGFloat hue;
+@property (nonatomic, readonly) CGFloat saturation;
+@property (nonatomic, readonly) CGFloat brightness;
 
 @end
+
+@interface UIColor (CWStandardColors)
+
++(UIColor*)cw_tableSeparatorDarkColor;
++(UIColor*)cw_tableSeparatorLightColor;
++(UIColor*)cw_tableBackgroundColor;
++(UIColor*)cw_tableCellBlueTextColor;
++(UIColor*)cw_tableCellGrayTextColor;
++(UIColor*)cw_infoTextOverPinStripeTextColor;
++(UIColor*)cw_tableCellValue1BlueColor;
++(UIColor*)cw_tableCellValue2BlueColor;
+
+@end
+

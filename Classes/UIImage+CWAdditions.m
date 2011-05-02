@@ -12,7 +12,7 @@
 //     * Redistributions in binary form must reproduce the above copyright
 //       notice, this list of conditions and the following disclaimer in the
 //       documentation and/or other materials provided with the distribution.
-//     * Neither the name of the Jayway nor the names of its contributors may 
+//     * Neither the name of Jayway AB nor the names of its contributors may 
 //       be used to endorse or promote products derived from this software 
 //       without specific prior written permission.
 //
@@ -28,7 +28,7 @@
 //  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 
-#import "UIImage+CWResize.h"
+#import "UIImage+CWAdditions.h"
 
 
 @implementation UIImage (CWResize)
@@ -102,6 +102,104 @@
 	UIGraphicsEndImageContext();
 	[mainImageView release];
 	return image;
+}
+
+@end
+
+
+@implementation UIImage (CWNormalization)
+
+
+-(UIImage*)normalizedImage;
+{
+    CGImageRef imgRef = self.CGImage;  
+    
+    CGAffineTransform transform = CGAffineTransformIdentity;  
+    CGSize imageSize = CGSizeMake(CGImageGetWidth(imgRef), CGImageGetHeight(imgRef));  
+    CGRect bounds = CGRectZero;
+    bounds.size = imageSize;
+    
+    UIImageOrientation orient = self.imageOrientation;
+    CGFloat temp;
+    
+    switch (orient) {  
+            
+        case UIImageOrientationUp: //EXIF = 1
+            return self;
+            
+        case UIImageOrientationUpMirrored: //EXIF = 2  
+            transform = CGAffineTransformMakeTranslation(imageSize.width, 0.0);  
+            transform = CGAffineTransformScale(transform, -1.0, 1.0);  
+            break;  
+            
+        case UIImageOrientationDown: //EXIF = 3  
+            transform = CGAffineTransformMakeTranslation(imageSize.width, imageSize.height);  
+            transform = CGAffineTransformRotate(transform, M_PI);  
+            break;  
+            
+        case UIImageOrientationDownMirrored: //EXIF = 4  
+            transform = CGAffineTransformMakeTranslation(0.0, imageSize.height);  
+            transform = CGAffineTransformScale(transform, 1.0, -1.0);  
+            break;  
+            
+        case UIImageOrientationLeftMirrored: //EXIF = 5  
+            temp = bounds.size.height;  
+            bounds.size.height = bounds.size.width;  
+            bounds.size.width = temp;  
+            transform = CGAffineTransformMakeTranslation(imageSize.height, imageSize.width);  
+            transform = CGAffineTransformScale(transform, -1.0, 1.0);  
+            transform = CGAffineTransformRotate(transform, 3.0 * M_PI / 2.0);  
+            break;  
+            
+        case UIImageOrientationLeft: //EXIF = 6  
+            temp = bounds.size.height;  
+            bounds.size.height = bounds.size.width;  
+            bounds.size.width = temp;  
+            transform = CGAffineTransformMakeTranslation(0.0, imageSize.width);  
+            transform = CGAffineTransformRotate(transform, 3.0 * M_PI / 2.0);  
+            break;  
+            
+        case UIImageOrientationRightMirrored: //EXIF = 7  
+            temp = bounds.size.height;  
+            bounds.size.height = bounds.size.width;  
+            bounds.size.width = temp;  
+            transform = CGAffineTransformMakeScale(-1.0, 1.0);  
+            transform = CGAffineTransformRotate(transform, M_PI / 2.0);  
+            break;  
+            
+        case UIImageOrientationRight: //EXIF = 8  
+            temp = bounds.size.height;  
+            bounds.size.height = bounds.size.width;  
+            bounds.size.width = temp;  
+            transform = CGAffineTransformMakeTranslation(imageSize.height, 0.0);  
+            transform = CGAffineTransformRotate(transform, M_PI / 2.0);  
+            break;  
+            
+        default:  
+            [NSException raise:NSInternalInconsistencyException format:@"Invalid image orientation"];  
+            
+    }  
+    
+    UIGraphicsBeginImageContext(bounds.size);  
+    
+    CGContextRef context = UIGraphicsGetCurrentContext();  
+    
+    if (orient == UIImageOrientationRight || orient == UIImageOrientationLeft) {
+        CGContextTranslateCTM(context, -imageSize.height, 0);  
+    }  
+    else {  
+        CGContextTranslateCTM(context, 0, -imageSize.height);  
+    }  
+    
+    CGContextConcatCTM(context, transform);  
+    
+    CGContextDrawImage(UIGraphicsGetCurrentContext(), 
+                       CGRectMake(0, 0, imageSize.width, imageSize.height), 
+                       imgRef);  
+    UIImage *imageCopy = UIGraphicsGetImageFromCurrentImageContext();  
+    UIGraphicsEndImageContext();  
+    
+    return imageCopy;  
 }
 
 @end

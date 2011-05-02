@@ -1,5 +1,5 @@
 //
-//  UIAlertView+CWErrorHandler.h
+//  UIView+CWVisualCue.h
 //  CWUIKit
 //  Created by Fredrik Olsson 
 //
@@ -30,19 +30,28 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIAlertView (CWErrorHandler)
-
 /*!
- * @abstract Return an UIAlertView that can respond to an error.
- *
- * @description The error must contain localized description and reson.
- * 				Will present buttons for recovery options if error also
- *				contains a recovery attempter and recovery options.
- *				The last recovery option is always asumed to be the 
- *				safe "Cancel" option.
- *				The recovery atempter must be able to handle optionIndex equal
- *				to NSNotFound, it sent if an alert view is cancelled by the system.
+ * @abstract Default duration for moving visual que. Default is 0.4 seconds.
  */
-+(UIAlertView*)alertViewWithError:(NSError*)error;
+extern NSTimeInterval CWVisualCueDefaultAnimationDuration;
+
+@interface UIView (CWVisualCue)
+
+-(UIView*)firstCommonSuperviewWithView:(UIView*)view;
+
++(void)animateVisualCueForMovingRect:(CGRect)fromRect inView:(UIView*)fromView 
+                              toRect:(CGRect)toRect inView:(UIView*)toView;
+
++(void)animateVisualCueForMovingRect:(CGRect)fromRect inView:(UIView*)fromView 
+                              toRect:(CGRect)toRect inView:(UIView*)toView
+							rotation:(CGFloat)rotation 
+                            duration:(NSTimeInterval)duration
+                     flashAtEndpoint:(BOOL)flash;
+
+-(void)animateVisualCueForMovingRect:(CGRect)fromRect inView:(UIView*)fromView 
+                              toRect:(CGRect)toRect inView:(UIView*)toView
+							rotation:(CGFloat)rotation 
+                            duration:(NSTimeInterval)duration
+                     flashAtEndpoint:(BOOL)flash;
 
 @end

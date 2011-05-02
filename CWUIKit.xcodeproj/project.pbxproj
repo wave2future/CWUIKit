@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A6108457136ED4E900D42782 /* CWGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = A610844E136ED4E900D42782 /* CWGeometry.h */; };
+		A6108458136ED4E900D42782 /* UIColor+CWAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A610844F136ED4E900D42782 /* UIColor+CWAdditions.h */; };
+		A6108459136ED4E900D42782 /* UIColor+CWAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A6108450136ED4E900D42782 /* UIColor+CWAdditions.m */; };
+		A610845E136ED4E900D42782 /* UIView+CWVisualCue.h in Headers */ = {isa = PBXBuildFile; fileRef = A6108455136ED4E900D42782 /* UIView+CWVisualCue.h */; };
+		A610845F136ED4E900D42782 /* UIView+CWVisualCue.m in Sources */ = {isa = PBXBuildFile; fileRef = A6108456136ED4E900D42782 /* UIView+CWVisualCue.m */; };
+		A610846A136ED5FA00D42782 /* flash.png in Resources */ = {isa = PBXBuildFile; fileRef = A6108469136ED5FA00D42782 /* flash.png */; };
 		A6A42D56136988B00051E0C7 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6A42D55136988B00051E0C7 /* OpenGLES.framework */; };
 		A6A97543136ABCA50065D9BE /* CWUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = A6A97542136ABCA50065D9BE /* CWUIKit.h */; };
 		A6A975D3136AC3A50065D9BE /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6A42D55136988B00051E0C7 /* OpenGLES.framework */; };
@@ -28,8 +34,8 @@
 		A6ED92A513695A14002DCEE4 /* UIAlertView+CWErrorHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = A6ED929313695A14002DCEE4 /* UIAlertView+CWErrorHandler.m */; };
 		A6ED92A613695A14002DCEE4 /* UIDevice+CWCapabilities.h in Headers */ = {isa = PBXBuildFile; fileRef = A6ED929413695A14002DCEE4 /* UIDevice+CWCapabilities.h */; };
 		A6ED92A713695A14002DCEE4 /* UIDevice+CWCapabilities.m in Sources */ = {isa = PBXBuildFile; fileRef = A6ED929513695A14002DCEE4 /* UIDevice+CWCapabilities.m */; };
-		A6ED92A813695A14002DCEE4 /* UIImage+CWResize.h in Headers */ = {isa = PBXBuildFile; fileRef = A6ED929613695A14002DCEE4 /* UIImage+CWResize.h */; };
-		A6ED92A913695A14002DCEE4 /* UIImage+CWResize.m in Sources */ = {isa = PBXBuildFile; fileRef = A6ED929713695A14002DCEE4 /* UIImage+CWResize.m */; };
+		A6ED92A813695A14002DCEE4 /* UIImage+CWAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A6ED929613695A14002DCEE4 /* UIImage+CWAdditions.h */; };
+		A6ED92A913695A14002DCEE4 /* UIImage+CWAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A6ED929713695A14002DCEE4 /* UIImage+CWAdditions.m */; };
 		A6ED92AA13695A14002DCEE4 /* UIViewController+CWPopover.h in Headers */ = {isa = PBXBuildFile; fileRef = A6ED929813695A14002DCEE4 /* UIViewController+CWPopover.h */; };
 		A6ED92AB13695A14002DCEE4 /* UIViewController+CWPopover.m in Sources */ = {isa = PBXBuildFile; fileRef = A6ED929913695A14002DCEE4 /* UIViewController+CWPopover.m */; };
 		A6ED92B313695A2A002DCEE4 /* SampleAppAppDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = A6ED92B013695A2A002DCEE4 /* SampleAppAppDelegate.h */; };
@@ -54,6 +60,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		A610842F136ED42300D42782 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A6ED9279136959A8002DCEE4 /* CWFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A6B254EE136BF9E700D5F57F /* libCWNetworkMonitor.a */;
+			remoteInfo = CWNetworkMonitor;
+		};
 		A6A973141369B7150065D9BE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A6ED9279136959A8002DCEE4 /* CWFoundation.xcodeproj */;
@@ -106,6 +119,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A610844E136ED4E900D42782 /* CWGeometry.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; name = CWGeometry.h; path = Classes/CWGeometry.h; sourceTree = "<group>"; };
+		A610844F136ED4E900D42782 /* UIColor+CWAdditions.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; name = "UIColor+CWAdditions.h"; path = "Classes/UIColor+CWAdditions.h"; sourceTree = "<group>"; };
+		A6108450136ED4E900D42782 /* UIColor+CWAdditions.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; name = "UIColor+CWAdditions.m"; path = "Classes/UIColor+CWAdditions.m"; sourceTree = "<group>"; };
+		A6108455136ED4E900D42782 /* UIView+CWVisualCue.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; name = "UIView+CWVisualCue.h"; path = "Classes/UIView+CWVisualCue.h"; sourceTree = "<group>"; };
+		A6108456136ED4E900D42782 /* UIView+CWVisualCue.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; name = "UIView+CWVisualCue.m"; path = "Classes/UIView+CWVisualCue.m"; sourceTree = "<group>"; };
+		A6108469136ED5FA00D42782 /* flash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = flash.png; path = Resources/flash.png; sourceTree = "<group>"; };
 		A6A42D55136988B00051E0C7 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		A6A97542136ABCA50065D9BE /* CWUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CWUIKit.h; path = Classes/CWUIKit.h; sourceTree = "<group>"; };
 		A6ED907E1369476D002DCEE4 /* README */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
@@ -127,8 +146,8 @@
 		A6ED929313695A14002DCEE4 /* UIAlertView+CWErrorHandler.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; name = "UIAlertView+CWErrorHandler.m"; path = "Classes/UIAlertView+CWErrorHandler.m"; sourceTree = "<group>"; };
 		A6ED929413695A14002DCEE4 /* UIDevice+CWCapabilities.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; name = "UIDevice+CWCapabilities.h"; path = "Classes/UIDevice+CWCapabilities.h"; sourceTree = "<group>"; };
 		A6ED929513695A14002DCEE4 /* UIDevice+CWCapabilities.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; name = "UIDevice+CWCapabilities.m"; path = "Classes/UIDevice+CWCapabilities.m"; sourceTree = "<group>"; };
-		A6ED929613695A14002DCEE4 /* UIImage+CWResize.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; name = "UIImage+CWResize.h"; path = "Classes/UIImage+CWResize.h"; sourceTree = "<group>"; };
-		A6ED929713695A14002DCEE4 /* UIImage+CWResize.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; name = "UIImage+CWResize.m"; path = "Classes/UIImage+CWResize.m"; sourceTree = "<group>"; };
+		A6ED929613695A14002DCEE4 /* UIImage+CWAdditions.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; name = "UIImage+CWAdditions.h"; path = "Classes/UIImage+CWAdditions.h"; sourceTree = "<group>"; };
+		A6ED929713695A14002DCEE4 /* UIImage+CWAdditions.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; name = "UIImage+CWAdditions.m"; path = "Classes/UIImage+CWAdditions.m"; sourceTree = "<group>"; };
 		A6ED929813695A14002DCEE4 /* UIViewController+CWPopover.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; name = "UIViewController+CWPopover.h"; path = "Classes/UIViewController+CWPopover.h"; sourceTree = "<group>"; };
 		A6ED929913695A14002DCEE4 /* UIViewController+CWPopover.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+CWPopover.m"; path = "Classes/UIViewController+CWPopover.m"; sourceTree = "<group>"; };
 		A6ED92AD13695A2A002DCEE4 /* CalloutViewSampleApp-Info.plist */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text.plist.xml; path = "CalloutViewSampleApp-Info.plist"; sourceTree = "<group>"; };
@@ -221,6 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				A6A97542136ABCA50065D9BE /* CWUIKit.h */,
+				A610844E136ED4E900D42782 /* CWGeometry.h */,
 				A6ED928813695A14002DCEE4 /* CWAuxiliaryAction.h */,
 				A6ED928913695A14002DCEE4 /* CWAuxiliaryAction.m */,
 				A6FF9FA01369A3FD0083F2EC /* UIActionSheet+AuxiliaryAction.m */,
@@ -235,10 +255,14 @@
 				A6ED929113695A14002DCEE4 /* NSObject+CWNibLocalizations.m */,
 				A6ED929213695A14002DCEE4 /* UIAlertView+CWErrorHandler.h */,
 				A6ED929313695A14002DCEE4 /* UIAlertView+CWErrorHandler.m */,
+				A610844F136ED4E900D42782 /* UIColor+CWAdditions.h */,
+				A6108450136ED4E900D42782 /* UIColor+CWAdditions.m */,
 				A6ED929413695A14002DCEE4 /* UIDevice+CWCapabilities.h */,
 				A6ED929513695A14002DCEE4 /* UIDevice+CWCapabilities.m */,
-				A6ED929613695A14002DCEE4 /* UIImage+CWResize.h */,
-				A6ED929713695A14002DCEE4 /* UIImage+CWResize.m */,
+				A6ED929613695A14002DCEE4 /* UIImage+CWAdditions.h */,
+				A6ED929713695A14002DCEE4 /* UIImage+CWAdditions.m */,
+				A6108455136ED4E900D42782 /* UIView+CWVisualCue.h */,
+				A6108456136ED4E900D42782 /* UIView+CWVisualCue.m */,
 				A6ED929813695A14002DCEE4 /* UIViewController+CWPopover.h */,
 				A6ED929913695A14002DCEE4 /* UIViewController+CWPopover.m */,
 			);
@@ -264,6 +288,7 @@
 			isa = PBXGroup;
 			children = (
 				A6ED9282136959A8002DCEE4 /* libCWFoundation.a */,
+				A6108430136ED42300D42782 /* libCWNetworkMonitor.a */,
 				A6ED9284136959A8002DCEE4 /* UnitTests.octest */,
 				A6A973151369B7150065D9BE /* NetworkMonitorSampleApp.app */,
 				A6A973171369B7150065D9BE /* XMLTranslatorSampleApp.app */,
@@ -287,6 +312,7 @@
 		A6ED92F413695C1E002DCEE4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A6108469136ED5FA00D42782 /* flash.png */,
 				A6ED92F513695C35002DCEE4 /* calloutview_left.png */,
 				A6ED92F613695C35002DCEE4 /* calloutview_left@2x.png */,
 				A6ED92F713695C35002DCEE4 /* calloutview_middle.png */,
@@ -311,10 +337,13 @@
 				A6ED92A213695A14002DCEE4 /* NSObject+CWNibLocalizations.h in Headers */,
 				A6ED92A413695A14002DCEE4 /* UIAlertView+CWErrorHandler.h in Headers */,
 				A6ED92A613695A14002DCEE4 /* UIDevice+CWCapabilities.h in Headers */,
-				A6ED92A813695A14002DCEE4 /* UIImage+CWResize.h in Headers */,
+				A6ED92A813695A14002DCEE4 /* UIImage+CWAdditions.h in Headers */,
 				A6ED92AA13695A14002DCEE4 /* UIViewController+CWPopover.h in Headers */,
 				A6ED92B313695A2A002DCEE4 /* SampleAppAppDelegate.h in Headers */,
 				A6A97543136ABCA50065D9BE /* CWUIKit.h in Headers */,
+				A6108457136ED4E900D42782 /* CWGeometry.h in Headers */,
+				A6108458136ED4E900D42782 /* UIColor+CWAdditions.h in Headers */,
+				A610845E136ED4E900D42782 /* UIView+CWVisualCue.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,6 +436,13 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		A6108430136ED42300D42782 /* libCWNetworkMonitor.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libCWNetworkMonitor.a;
+			remoteRef = A610842F136ED42300D42782 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		A6A973151369B7150065D9BE /* NetworkMonitorSampleApp.app */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.application;
@@ -457,6 +493,7 @@
 				A6ED932313695CF9002DCEE4 /* calloutview_middle@2x.png in Resources */,
 				A6ED932413695CF9002DCEE4 /* calloutview_right.png in Resources */,
 				A6ED932513695CF9002DCEE4 /* calloutview_right@2x.png in Resources */,
+				A610846A136ED5FA00D42782 /* flash.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,8 +522,10 @@
 				A6ED92A313695A14002DCEE4 /* NSObject+CWNibLocalizations.m in Sources */,
 				A6ED92A513695A14002DCEE4 /* UIAlertView+CWErrorHandler.m in Sources */,
 				A6ED92A713695A14002DCEE4 /* UIDevice+CWCapabilities.m in Sources */,
-				A6ED92A913695A14002DCEE4 /* UIImage+CWResize.m in Sources */,
+				A6ED92A913695A14002DCEE4 /* UIImage+CWAdditions.m in Sources */,
 				A6ED92AB13695A14002DCEE4 /* UIViewController+CWPopover.m in Sources */,
+				A6108459136ED4E900D42782 /* UIColor+CWAdditions.m in Sources */,
+				A610845F136ED4E900D42782 /* UIView+CWVisualCue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

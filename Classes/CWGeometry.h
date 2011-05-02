@@ -1,5 +1,5 @@
 //
-//  UIAlertView+CWErrorHandler.h
+//  CWGeometry.h
 //  CWUIKit
 //  Created by Fredrik Olsson 
 //
@@ -30,19 +30,46 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIAlertView (CWErrorHandler)
 
-/*!
- * @abstract Return an UIAlertView that can respond to an error.
- *
- * @description The error must contain localized description and reson.
- * 				Will present buttons for recovery options if error also
- *				contains a recovery attempter and recovery options.
- *				The last recovery option is always asumed to be the 
- *				safe "Cancel" option.
- *				The recovery atempter must be able to handle optionIndex equal
- *				to NSNotFound, it sent if an alert view is cancelled by the system.
- */
-+(UIAlertView*)alertViewWithError:(NSError*)error;
+CG_INLINE CGSize
+CWCGPointDictance(CGPoint p1, CGPoint p2)
+{
+    return CGSizeMake(p2.x - p1.x, p2.y - p1.y);
+}
 
-@end
+
+CG_INLINE CGPoint
+CWCGRectCenter(CGRect r) {
+    return CGPointMake(r.origin.x + r.size.width / 2, 
+                       r.origin.y + r.size.height / 2);
+}
+
+CG_INLINE BOOL 
+CWRectFitsRect(CGRect rect1, CGRect rect2) {
+	return (rect1.size.width <= rect2.size.width && rect1.size.height <= rect2.size.height);
+}
+
+CG_INLINE CGRect 
+CWRectScaleToFillRect(CGRect rect1, CGRect rect2) {
+	CGFloat ratio = rect1.size.height / rect1.size.width;
+    CGRect rect = CGRectMake(rect1.origin.x, rect1.origin.y, rect2.size.width, rect2.size.width * ratio);
+    if (!CWRectFitsRect(rect, rect2)) {
+        rect = CGRectMake(rect1.origin.x, rect1.origin.y, rect2.size.height / ratio, rect2.size.height);
+	}
+    return rect;
+}
+
+CG_INLINE CGRect 
+CWRectCenterInRect(CGRect rect1, CGRect rect2) {
+	CGFloat x = rect2.origin.x + (rect2.size.width - rect1.size.width) / 2;
+	CGFloat y = rect2.origin.y + (rect2.size.height - rect1.size.height) / 2;
+	return CGRectMake(x, y, rect1.size.width, rect1.size.height);
+}
+
+CG_INLINE CGRect 
+CWRectFitAndCenterInRect(CGRect rect1, CGRect rect2) {
+	if (!CWRectFitsRect(rect1, rect2)) {
+		rect1 = CWRectScaleToFillRect(rect1, rect2);
+    }
+    return CWRectCenterInRect(rect1, rect2);
+}
