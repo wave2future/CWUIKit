@@ -1,5 +1,5 @@
 //
-//  CWUIKit.h
+//  UIButton+CWAdditions.m
 //  CWUIKit
 //  Created by Fredrik Olsson 
 //
@@ -28,19 +28,34 @@
 //  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 
-#import "CWGeometry.h"
-#import "CWAuxiliaryAction.h"
-#import "CWBackgroundBars.h"
-#import "CWCalloutView.h"
-#import "CWLinearLayoutView.h"
-#import "CWPrimaryViewWindow.h"
-#import "CWStyledSegmentedControl.h"
-#import "NSObject+CWNibLocalizations.h"
-#import "UIAlertView+CWErrorHandler.h"
-#import "UIBarButtonItem+CWAdditions.h"
 #import "UIButton+CWAdditions.h"
-#import "UIColor+CWAdditions.h"
-#import "UIDevice+CWCapabilities.h"
-#import "UIImage+CWAdditions.h"
-#import "UIView+CWVisualCue.h"
-#import "UIViewController+CWPopover.h"
+
+
+@implementation UIButton (CWAdditions)
+
++(UIButton*)buttonWithType:(UIButtonType)type title:(NSString*)title target:(id)target action:(SEL)action;
+{
+	UIButton* button = [UIButton buttonWithType:type];
+    [button setTitle:title forState:UIControlStateNormal];
+    [button addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+    return button;
+}
+
++(UIButton*)destructiveButtonTitle:(NSString*)title target:(id)target action:(SEL)action;
+{
+	UIButton* button = [UIButton buttonWithType:UIButtonTypeCustom
+                                          title:title
+                                         target:target
+                                         action:action];
+	UIImage *deleteImage = [UIImage imageNamed:@"CWUIKitResources.bundle/delete_button.png"];
+	deleteImage = [deleteImage stretchableImageWithLeftCapWidth:floorf((deleteImage.size.width -1)/2)  topCapHeight:floorf((deleteImage.size.height -1)/2)];
+	[button setBackgroundImage:deleteImage forState:UIControlStateNormal];
+	UIImage* highlightedImage = [UIImage imageNamed:@"CWUIKitResources.bundle/delete_button_highlighted.png"];
+	highlightedImage = [highlightedImage stretchableImageWithLeftCapWidth:floorf((highlightedImage.size.width -1)/2)  topCapHeight:floorf((highlightedImage.size.height -1)/2)];
+	[button setBackgroundImage:highlightedImage forState:UIControlStateHighlighted];
+	button.titleLabel.shadowOffset = CGSizeMake(0, -1);
+	button.titleLabel.font = [UIFont boldSystemFontOfSize:20.0];
+	return button;
+}
+
+@end

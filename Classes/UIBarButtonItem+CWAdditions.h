@@ -1,5 +1,5 @@
 //
-//  CWUIKit.h
+//  UIBarButtonItem+CWAdditions.h
 //  CWUIKit
 //  Created by Fredrik Olsson 
 //
@@ -28,19 +28,17 @@
 //  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 
-#import "CWGeometry.h"
-#import "CWAuxiliaryAction.h"
-#import "CWBackgroundBars.h"
-#import "CWCalloutView.h"
-#import "CWLinearLayoutView.h"
-#import "CWPrimaryViewWindow.h"
-#import "CWStyledSegmentedControl.h"
-#import "NSObject+CWNibLocalizations.h"
-#import "UIAlertView+CWErrorHandler.h"
-#import "UIBarButtonItem+CWAdditions.h"
-#import "UIButton+CWAdditions.h"
-#import "UIColor+CWAdditions.h"
-#import "UIDevice+CWCapabilities.h"
-#import "UIImage+CWAdditions.h"
-#import "UIView+CWVisualCue.h"
-#import "UIViewController+CWPopover.h"
+#import <UIKit/UIKit.h>
+
+
+@interface UIBarButtonItem (CWAdditions)
+
++(UIBarButtonItem*)barButtonItemWithImage:(UIImage*)image style:(UIBarButtonItemStyle)style target:(id)target action:(SEL)action;
++(UIBarButtonItem*)barButtonItemWithTitle:(NSString*)title style:(UIBarButtonItemStyle)style target:(id)target action:(SEL)action;
++(UIBarButtonItem*)barButtonItemWithBarButtonSystemItem:(UIBarButtonSystemItem)systemItem target:(id)target action:(SEL)action;
++(UIBarButtonItem*)barButtonItemWithCustomView:(UIView*)customView;
+
++(UIBarButtonItem*)barButtonItemWithTitle:(NSString*)title titleColor:(UIColor*)titleColor titleShadowColor:(UIColor*)titleShadowColor image:(UIImage*)image stretchableBackgroundImage:(UIImage*)backgroundImage stretchableHighlightedBackgroundImage:(UIImage*)highlightedBackgroundImage target:(id)target action:(SEL)action;
++(UIBarButtonItem*)barButtonItemWithTitle:(NSString*)title titleColor:(UIColor*)titleColor titleShadowColor:(UIColor*)titleShadowColor image:(UIImage*)image style:(UIBarButtonItemStyle)style target:(id)target action:(SEL)action;
+
+@end

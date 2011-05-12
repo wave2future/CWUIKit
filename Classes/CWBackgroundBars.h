@@ -1,5 +1,5 @@
 //
-//  CWUIKit.h
+//  CWBackgroundBars.h
 //  CWUIKit
 //  Created by Fredrik Olsson 
 //
@@ -28,19 +28,30 @@
 //  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 
-#import "CWGeometry.h"
-#import "CWAuxiliaryAction.h"
-#import "CWBackgroundBars.h"
-#import "CWCalloutView.h"
-#import "CWLinearLayoutView.h"
-#import "CWPrimaryViewWindow.h"
-#import "CWStyledSegmentedControl.h"
-#import "NSObject+CWNibLocalizations.h"
-#import "UIAlertView+CWErrorHandler.h"
-#import "UIBarButtonItem+CWAdditions.h"
-#import "UIButton+CWAdditions.h"
-#import "UIColor+CWAdditions.h"
-#import "UIDevice+CWCapabilities.h"
-#import "UIImage+CWAdditions.h"
-#import "UIView+CWVisualCue.h"
-#import "UIViewController+CWPopover.h"
+#import <UIKit/UIKit.h>
+
+
+@interface CWBackgroundNavigationBar : UINavigationBar {
+@private
+    UIImageView* _backgroundView;
+    BOOL _hiddenBackgroundImage;
+}
+
+@property(nonatomic, retain) UIView* backgroundView;
+@property(nonatomic, assign, getter=isHiddenBackgroundView) BOOL hiddenBackgroundView;
+-(void)setHiddenBackgroundView:(BOOL)hidden animated:(BOOL)animated;
+
+@end
+
+
+@interface CWBackgroundToolbar : UIToolbar {
+@private
+    UIImageView* _backgroundView;
+    BOOL _hiddenBackgroundImage;
+}
+
+@property(nonatomic, retain) UIView* backgroundView;
+@property(nonatomic, assign, getter=isHiddenBackgroundView) BOOL hiddenBackgroundView;
+-(void)setHiddenBackgroundView:(BOOL)hidden animated:(BOOL)animated;
+
+@end

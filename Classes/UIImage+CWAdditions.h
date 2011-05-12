@@ -55,3 +55,15 @@
 -(UIImage*)normalizedImage;
 
 @end
+
+
+@interface UIImage (CWStretchable)
+
+-(UIImage*)subimageWithRect:(CGRect)rect;
+
+-(UIImage*)stretchableImageFromLeftCapOfImage;
+-(UIImage*)stretchableImageFromMiddleOfImage;
+-(UIImage*)stretchableImageFromRightCapOfImage;
+
+@end
+

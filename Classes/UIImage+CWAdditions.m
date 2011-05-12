@@ -203,3 +203,44 @@
 }
 
 @end
+
+
+@implementation UIImage (CWStretchable)
+
+-(UIImage*)subimageWithRect:(CGRect)rect;
+{
+	UIGraphicsBeginImageContextWithOptions(rect.size, NO, self.scale);
+    [self drawAtPoint:CGPointMake(-rect.origin.x, -rect.origin.y)];
+    UIImage* image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return image;
+}
+
+-(UIImage*)stretchableImageFromLeftCapOfImage;
+{
+    CGFloat leftCap = self.leftCapWidth;
+    CGSize size = self.size;
+	CGRect rect = CGRectMake(0, 0, leftCap + 1, size.height);
+    UIImage* image = [self subimageWithRect:rect];
+    return [image stretchableImageWithLeftCapWidth:leftCap topCapHeight:self.topCapHeight];
+}
+
+-(UIImage*)stretchableImageFromMiddleOfImage;
+{
+    CGFloat leftCap = self.leftCapWidth;
+    CGSize size = self.size;
+	CGRect rect = CGRectMake(leftCap, 0, 1, size.height);
+    UIImage* image = [self subimageWithRect:rect];
+    return [image stretchableImageWithLeftCapWidth:0 topCapHeight:self.topCapHeight];
+}
+
+-(UIImage*)stretchableImageFromRightCapOfImage;
+{
+    CGFloat leftCap = self.leftCapWidth;
+    CGSize size = self.size;
+	CGRect rect = CGRectMake(leftCap, 0, size.width - leftCap, size.height);
+    UIImage* image = [self subimageWithRect:rect];
+    return [image stretchableImageWithLeftCapWidth:1 topCapHeight:self.topCapHeight];
+}
+
+@end

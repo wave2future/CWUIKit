@@ -1,5 +1,5 @@
 //
-//  CWUIKit.h
+//  CWStyledSegmentedControl.h
 //  CWUIKit
 //  Created by Fredrik Olsson 
 //
@@ -28,19 +28,24 @@
 //  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 
-#import "CWGeometry.h"
-#import "CWAuxiliaryAction.h"
-#import "CWBackgroundBars.h"
-#import "CWCalloutView.h"
-#import "CWLinearLayoutView.h"
-#import "CWPrimaryViewWindow.h"
-#import "CWStyledSegmentedControl.h"
-#import "NSObject+CWNibLocalizations.h"
-#import "UIAlertView+CWErrorHandler.h"
-#import "UIBarButtonItem+CWAdditions.h"
-#import "UIButton+CWAdditions.h"
-#import "UIColor+CWAdditions.h"
-#import "UIDevice+CWCapabilities.h"
-#import "UIImage+CWAdditions.h"
-#import "UIView+CWVisualCue.h"
-#import "UIViewController+CWPopover.h"
+#import <UIKit/UIKit.h>
+
+
+@interface CWStyledSegmentedControl : UIControl {
+@private
+    NSArray* _buttons;
+    NSArray* _dividers;
+    NSInteger _selectedSegmentIndex;
+}
+
+@property(nonatomic, assign) NSInteger selectedSegmentIndex;
+
+-(id)initWithItems:(NSArray*)items stretchableBackgroundImage:(UIImage*)backgroundImage stretchableSelectedBackgroundImage:(UIImage*)selectedBackgroundImage stretchableDividerImage:(UIImage*)image;
+
+-(void)setTitleFont:(UIFont*)font;
+-(void)setTitleShadowOffset:(CGSize)offset;
+-(void)setReversesTitleShadowWhenHighlighted:(BOOL)reverses;
+-(void)setTitleColor:(UIColor*)color forState:(UIControlState)state;
+-(void)setTitleShadowColor:(UIColor*)color forState:(UIControlState)state;
+
+@end
