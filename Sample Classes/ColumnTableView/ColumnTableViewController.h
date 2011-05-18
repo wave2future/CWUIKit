@@ -1,5 +1,5 @@
 //
-//  CWUIKit.h
+//  ColumnTableViewController.h
 //  CWUIKit
 //  Created by Fredrik Olsson 
 //
@@ -28,22 +28,16 @@
 //  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 
-#import "CWGeometry.h"
-#import "CWAuxiliaryAction.h"
-#import "CWBackgroundBars.h"
-#import "CWCalloutView.h"
-#import "CWColumnTableView.h"
-#import "CWColumnTableViewCell.h"
-#import "CWTableViewCellBackgroundView.h"
-#import "CWLinearLayoutView.h"
-#import "CWPrimaryViewWindow.h"
-#import "CWStyledSegmentedControl.h"
-#import "NSObject+CWNibLocalizations.h"
-#import "UIAlertView+CWErrorHandler.h"
-#import "UIBarButtonItem+CWAdditions.h"
-#import "UIButton+CWAdditions.h"
-#import "UIColor+CWAdditions.h"
-#import "UIDevice+CWCapabilities.h"
-#import "UIImage+CWAdditions.h"
-#import "UIView+CWVisualCue.h"
-#import "UIViewController+CWPopover.h"
+#import <UIKit/UIKit.h>
+#import "CWUIKit.h"
+
+@interface ColumnTableViewController : UIViewController <CWColumnTableViewDataSource, CWColumnTableViewDelegate> {
+@private
+	CWColumnTableView* _columnTableView;
+    NSMutableArray* modelObjects;
+}
+
+-(IBAction)addNewPerson:(id)sender;
+-(IBAction)complexUpdate:(id)sender;
+
+@end

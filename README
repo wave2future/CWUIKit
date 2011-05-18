@@ -46,6 +46,8 @@ only describes a subset of the main funcationality.
 
 * CWAuxiliaryActions - Use blocks as callbacks for UIAlertView & UIActionSheet.
 * CWCalloutView - Configurable callout view like in MapKit.
+* CWColumnTableView - Like UITableView with multiple columns
+* CWTableViewBackgroundCell - Configurabe background and highlight for cells.
 * CWLinearLayout - Rule based linear layout, when springs&struts comes short.
 * CWNibLocalization - Prefix text with @ in IB gets localized from strings.
 * UIAlertView - Conviniece additions to construct from NSError instances.
