@@ -1,5 +1,5 @@
 //
-//  CWUIKit.h
+//  UIApplication+NetworkActivity.m
 //  CWUIKit
 //  Created by Fredrik Olsson 
 //
@@ -28,23 +28,47 @@
 //  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 
-#import "CWGeometry.h"
-#import "CWAuxiliaryAction.h"
-#import "CWBackgroundBars.h"
-#import "CWCalloutView.h"
-#import "CWColumnTableView.h"
-#import "CWColumnTableViewCell.h"
-#import "CWTableViewCellBackgroundView.h"
-#import "CWLinearLayoutView.h"
-#import "CWPrimaryViewWindow.h"
-#import "CWStyledSegmentedControl.h"
-#import "NSObject+CWNibLocalizations.h"
 #import "UIApplication+CWAdditions.h"
-#import "UIAlertView+CWErrorHandler.h"
-#import "UIBarButtonItem+CWAdditions.h"
-#import "UIButton+CWAdditions.h"
-#import "UIColor+CWAdditions.h"
-#import "UIDevice+CWCapabilities.h"
-#import "UIImage+CWAdditions.h"
-#import "UIView+CWVisualCue.h"
-#import "UIViewController+CWPopover.h"
+#import "NSInvocation+CWVariableArguments.h"
+
+@implementation UIApplication (CWNetworkTask)
+
+
+static NSInteger networkTaskCount = 0;
+
+-(UIBackgroundTaskIdentifier)beginNetworkTaskWithExpirationHandler:(void(^)(void))handler;
+{
+    @synchronized(self) {
+		networkTaskCount++;	 
+        if (networkTaskCount == 1) {
+        	self.networkActivityIndicatorVisible = YES;
+        }
+        return  [self beginBackgroundTaskWithExpirationHandler:handler];
+    }
+    return UIBackgroundTaskInvalid;
+}
+
+-(void)delayedEndNetworkTask:(UIBackgroundTaskIdentifier)identifier;
+{
+    @synchronized(self) {
+    	networkTaskCount--;
+        if (networkTaskCount == 0) {
+        	self.networkActivityIndicatorVisible = NO;
+        }
+        if (identifier != UIBackgroundTaskInvalid) {
+	        [self endBackgroundTask:identifier];
+        }
+    }
+}
+
+-(void)endNetworkTask:(UIBackgroundTaskIdentifier)identifier;
+{
+    // A delay is added to avoid a visual glitch if a new network task is
+    // started imidiately after the last one ends.
+    [[NSInvocation invocationWithTarget:self
+                               selector:@selector(delayedEndNetworkTask:)
+                        retainArguments:NO, identifier] invokeOnThread:[NSThread mainThread]
+     														afterDelay:0.5];
+}
+
+@end

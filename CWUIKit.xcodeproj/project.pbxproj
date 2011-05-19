@@ -48,6 +48,8 @@
 		A6DAA7D61383E53000518CC8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6ED9127136947C4002DCEE4 /* CoreGraphics.framework */; };
 		A6DAA7D71383E53000518CC8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6ED9129136947C4002DCEE4 /* QuartzCore.framework */; };
 		A6DAA7D81383E53000518CC8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6ED912B136947C4002DCEE4 /* UIKit.framework */; };
+		A6DAAB1E13853C5800518CC8 /* UIApplication+CWAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A6DAAB1C13853C5800518CC8 /* UIApplication+CWAdditions.h */; };
+		A6DAAB1F13853C5800518CC8 /* UIApplication+CWAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A6DAAB1D13853C5800518CC8 /* UIApplication+CWAdditions.m */; };
 		A6ED9128136947C4002DCEE4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6ED9127136947C4002DCEE4 /* CoreGraphics.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		A6ED912A136947C4002DCEE4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6ED9129136947C4002DCEE4 /* QuartzCore.framework */; };
 		A6ED912C136947C4002DCEE4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6ED912B136947C4002DCEE4 /* UIKit.framework */; };
@@ -117,7 +119,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D2AAC07D0554694100DB518D /* CWUIKit */;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
 			remoteInfo = CWUIKit;
 		};
 		A6ED9281136959A8002DCEE4 /* PBXContainerItemProxy */ = {
@@ -196,6 +198,8 @@
 		A6DAA6DE1383E48C00518CC8 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		A6DAA6DF1383E48C00518CC8 /* SampleAppAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; path = SampleAppAppDelegate.h; sourceTree = "<group>"; };
 		A6DAA6E01383E48C00518CC8 /* SampleAppAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; path = SampleAppAppDelegate.m; sourceTree = "<group>"; };
+		A6DAAB1C13853C5800518CC8 /* UIApplication+CWAdditions.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; name = "UIApplication+CWAdditions.h"; path = "Classes/UIApplication+CWAdditions.h"; sourceTree = "<group>"; };
+		A6DAAB1D13853C5800518CC8 /* UIApplication+CWAdditions.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+CWAdditions.m"; path = "Classes/UIApplication+CWAdditions.m"; sourceTree = "<group>"; };
 		A6ED907E1369476D002DCEE4 /* README */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		A6ED9127136947C4002DCEE4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		A6ED9129136947C4002DCEE4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -346,6 +350,8 @@
 				A65D9B5E137BC3EA007D25A0 /* CWStyledSegmentedControl.m */,
 				A6ED929013695A14002DCEE4 /* NSObject+CWNibLocalizations.h */,
 				A6ED929113695A14002DCEE4 /* NSObject+CWNibLocalizations.m */,
+				A6DAAB1C13853C5800518CC8 /* UIApplication+CWAdditions.h */,
+				A6DAAB1D13853C5800518CC8 /* UIApplication+CWAdditions.m */,
 				A6ED929213695A14002DCEE4 /* UIAlertView+CWErrorHandler.h */,
 				A6ED929313695A14002DCEE4 /* UIAlertView+CWErrorHandler.m */,
 				A65D9B66137BC65A007D25A0 /* UIBarButtonItem+CWAdditions.h */,
@@ -472,6 +478,7 @@
 				A6DAA6A21383E36000518CC8 /* CWColumnTableView.h in Headers */,
 				A6DAA6A41383E36000518CC8 /* CWColumnTableViewCell.h in Headers */,
 				A6DAA6A61383E36000518CC8 /* CWTableViewCellBackgroundView.h in Headers */,
+				A6DAAB1E13853C5800518CC8 /* UIApplication+CWAdditions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -706,6 +713,7 @@
 				A6DAA6A31383E36000518CC8 /* CWColumnTableView.m in Sources */,
 				A6DAA6A51383E36000518CC8 /* CWColumnTableViewCell.m in Sources */,
 				A6DAA6A71383E36000518CC8 /* CWTableViewCellBackgroundView.m in Sources */,
+				A6DAAB1F13853C5800518CC8 /* UIApplication+CWAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

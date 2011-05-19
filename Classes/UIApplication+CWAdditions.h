@@ -1,5 +1,5 @@
 //
-//  CWUIKit.h
+//  UIApplication+NetworkActivity.h
 //  CWUIKit
 //  Created by Fredrik Olsson 
 //
@@ -28,23 +28,31 @@
 //  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 
-#import "CWGeometry.h"
-#import "CWAuxiliaryAction.h"
-#import "CWBackgroundBars.h"
-#import "CWCalloutView.h"
-#import "CWColumnTableView.h"
-#import "CWColumnTableViewCell.h"
-#import "CWTableViewCellBackgroundView.h"
-#import "CWLinearLayoutView.h"
-#import "CWPrimaryViewWindow.h"
-#import "CWStyledSegmentedControl.h"
-#import "NSObject+CWNibLocalizations.h"
-#import "UIApplication+CWAdditions.h"
-#import "UIAlertView+CWErrorHandler.h"
-#import "UIBarButtonItem+CWAdditions.h"
-#import "UIButton+CWAdditions.h"
-#import "UIColor+CWAdditions.h"
-#import "UIDevice+CWCapabilities.h"
-#import "UIImage+CWAdditions.h"
-#import "UIView+CWVisualCue.h"
-#import "UIViewController+CWPopover.h"
+#import <UIKit/UIKit.h>
+
+/*!
+ * @abstract Additions to UIApplication to support the network activity
+ *           indicator in a better way.
+ */
+@interface UIApplication (CWNetworkTask)
+
+/*!
+ * @abstract Start a network activity.
+ *
+ * @discussion The network activity indicator will be active as long as one or
+ *             more network tasks are ongoing.
+ *             Each network task is also wrapped in a background task to allow
+ *             network tasks to be completed when application enters the
+ *             background.
+ */
+-(UIBackgroundTaskIdentifier)beginNetworkTaskWithExpirationHandler:(void(^)(void))handler;
+
+/*!
+ * @abstract End a network activity.
+ *
+ * @discussion The network activity indicator is stopped when the last network
+ *             task is ended.
+ */
+-(void)endNetworkTask:(UIBackgroundTaskIdentifier)identifier;
+
+@end
