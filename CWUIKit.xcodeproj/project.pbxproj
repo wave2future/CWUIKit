@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B3096C51386662300EE9727 /* CWSearchBar.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B3096C11386662300EE9727 /* CWSearchBar.h */; };
+		8B3096C61386662300EE9727 /* CWSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B3096C21386662300EE9727 /* CWSearchBar.m */; };
+		8B3096C71386662300EE9727 /* CWTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B3096C31386662300EE9727 /* CWTextField.h */; };
+		8B3096C81386662300EE9727 /* CWTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B3096C41386662300EE9727 /* CWTextField.m */; };
 		A6108457136ED4E900D42782 /* CWGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = A610844E136ED4E900D42782 /* CWGeometry.h */; };
 		A6108458136ED4E900D42782 /* UIColor+CWAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A610844F136ED4E900D42782 /* UIColor+CWAdditions.h */; };
 		A6108459136ED4E900D42782 /* UIColor+CWAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A6108450136ED4E900D42782 /* UIColor+CWAdditions.m */; };
@@ -160,6 +164,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8B3096C11386662300EE9727 /* CWSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CWSearchBar.h; path = Classes/CWSearchBar.h; sourceTree = "<group>"; };
+		8B3096C21386662300EE9727 /* CWSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CWSearchBar.m; path = Classes/CWSearchBar.m; sourceTree = "<group>"; };
+		8B3096C31386662300EE9727 /* CWTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CWTextField.h; path = Classes/CWTextField.h; sourceTree = "<group>"; };
+		8B3096C41386662300EE9727 /* CWTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CWTextField.m; path = Classes/CWTextField.m; sourceTree = "<group>"; };
 		A610844E136ED4E900D42782 /* CWGeometry.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; name = CWGeometry.h; path = Classes/CWGeometry.h; sourceTree = "<group>"; };
 		A610844F136ED4E900D42782 /* UIColor+CWAdditions.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; name = "UIColor+CWAdditions.h"; path = "Classes/UIColor+CWAdditions.h"; sourceTree = "<group>"; };
 		A6108450136ED4E900D42782 /* UIColor+CWAdditions.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; name = "UIColor+CWAdditions.m"; path = "Classes/UIColor+CWAdditions.m"; sourceTree = "<group>"; };
@@ -327,6 +335,10 @@
 			isa = PBXGroup;
 			children = (
 				A6A97542136ABCA50065D9BE /* CWUIKit.h */,
+				8B3096C11386662300EE9727 /* CWSearchBar.h */,
+				8B3096C21386662300EE9727 /* CWSearchBar.m */,
+				8B3096C31386662300EE9727 /* CWTextField.h */,
+				8B3096C41386662300EE9727 /* CWTextField.m */,
 				A610844E136ED4E900D42782 /* CWGeometry.h */,
 				A6ED928813695A14002DCEE4 /* CWAuxiliaryAction.h */,
 				A6ED928913695A14002DCEE4 /* CWAuxiliaryAction.m */,
@@ -479,6 +491,8 @@
 				A6DAA6A41383E36000518CC8 /* CWColumnTableViewCell.h in Headers */,
 				A6DAA6A61383E36000518CC8 /* CWTableViewCellBackgroundView.h in Headers */,
 				A6DAAB1E13853C5800518CC8 /* UIApplication+CWAdditions.h in Headers */,
+				8B3096C51386662300EE9727 /* CWSearchBar.h in Headers */,
+				8B3096C71386662300EE9727 /* CWTextField.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -714,6 +728,8 @@
 				A6DAA6A51383E36000518CC8 /* CWColumnTableViewCell.m in Sources */,
 				A6DAA6A71383E36000518CC8 /* CWTableViewCellBackgroundView.m in Sources */,
 				A6DAAB1F13853C5800518CC8 /* UIApplication+CWAdditions.m in Sources */,
+				8B3096C61386662300EE9727 /* CWSearchBar.m in Sources */,
+				8B3096C81386662300EE9727 /* CWTextField.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
