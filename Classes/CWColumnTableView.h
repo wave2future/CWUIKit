@@ -146,6 +146,8 @@
     CWColumnTableViewCell* _cellBeingMoved;
 	NSMutableArray* _backgroundRowViews;
 	NSInteger _minimumNumberOfRows;
+    UIView* _backgroundView;
+    UIImage* _tiledBackgroundImage;
     struct {
     	unsigned int delegateHasWillSelectPosition:1;
     	unsigned int delegateHasDidSelectPosition:1;
@@ -234,6 +236,18 @@
  *				column table view is empty.
  */
 @property (nonatomic, assign) NSInteger minimumNumberOfRows;
+
+
+/*!
+ * @abstract A static background view behind cells and row background views.
+ */
+@property (nonatomic, retain) UIView* backgroundView;
+
+
+/*!
+ * @abstract An image to tile and scroll behind contents
+ */
+@property (nonatomic, retain) UIImage* tiledBackgroundImage;
 
 
 /*!

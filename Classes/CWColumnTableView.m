@@ -65,6 +65,8 @@
 @synthesize separatorColor = _separatorColor;
 @synthesize editing = _editing;
 @synthesize minimumNumberOfRows = _minimumNumberOfRows;
+@synthesize backgroundView = _backgroundView;
+@synthesize tiledBackgroundImage = _tiledBackgroundImage;
 
 -(void)setDataSource:(id<CWColumnTableViewDataSource>)dataSource;
 {
@@ -158,6 +160,32 @@
     }
 }
 
+-(void)setBackgroundView:(UIView *)view;
+{
+	if (_backgroundView) {
+    	[_backgroundView removeFromSuperview];
+    }
+    _backgroundView = view;
+    if (view) {
+    	[self insertSubview:view atIndex:0];
+    }
+    [self setNeedsLayout];
+}
+
+-(void)setTiledBackgroundImage:(UIImage *)image;
+{
+    [_tiledBackgroundImage release];
+    _tiledBackgroundImage = [image retain];
+	if (image) {
+    	UIView* view = [[[UIView alloc] initWithFrame:CGRectMake(0, 0, 10, 10)] autorelease];
+        view.backgroundColor = [UIColor colorWithPatternImage:image];
+        self.backgroundView = view;
+    } else {
+    	self.backgroundView = nil;	
+    }
+}
+
+
 #pragma mark --- View livecycle
 
 -(void)setupDefaultValues;
@@ -213,6 +241,7 @@
 		[_cellBeingMoved release];
 		_cellBeingMoved = nil;
 	}
+    [_tiledBackgroundImage release];
     [super dealloc];
 }
 
@@ -451,6 +480,23 @@
     CGSize size = self.bounds.size;
 	UIEdgeInsets insets = self.contentInset;
 
+    if (_backgroundView) {
+        CGRect frame;
+        if (_tiledBackgroundImage) {
+            CGSize size = self.bounds.size;
+            CGFloat tileHeight = _tiledBackgroundImage.size.height;
+            size.height = (floorf(size.height / tileHeight) + 2) * tileHeight;
+            CGPoint offset = self.contentOffset;
+            offset.y = floorf(offset.y / tileHeight) * tileHeight;
+            frame.origin = offset;
+            frame.size = size;
+        } else {
+            frame = self.bounds;
+        }
+	    _backgroundView.frame = frame;
+    	[self sendSubviewToBack:_backgroundView];
+    }
+    
 	int minNumberOfRows = MAX(self.numberOfRows, self.minimumNumberOfRows);	
 	for (int rowIndex = 0; rowIndex < minNumberOfRows; rowIndex++) {
 		if (_columnTableViewFlags.delegateHasBackgroundForRow) {
