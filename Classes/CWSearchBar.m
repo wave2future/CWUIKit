@@ -200,6 +200,16 @@
 	return willResignFirstResponder;
 }
 
+- (BOOL)becomeFirstResponder
+{
+	return [_searchField becomeFirstResponder];
+}
+
+-(BOOL)canBecomeFirstResponder;
+{
+	return [_searchField canBecomeFirstResponder];
+}
+
 #pragma mark -
 #pragma mark UITextFieldDelegate comformance
 
