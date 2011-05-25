@@ -11,6 +11,7 @@
 		8B3096C61386662300EE9727 /* CWSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B3096C21386662300EE9727 /* CWSearchBar.m */; };
 		8B3096C71386662300EE9727 /* CWTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B3096C31386662300EE9727 /* CWTextField.h */; };
 		8B3096C81386662300EE9727 /* CWTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B3096C41386662300EE9727 /* CWTextField.m */; };
+		8B85D06F138D099A000B6C1F /* input_field_extendable.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B85D06E138D099A000B6C1F /* input_field_extendable.png */; };
 		A6108457136ED4E900D42782 /* CWGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = A610844E136ED4E900D42782 /* CWGeometry.h */; };
 		A6108458136ED4E900D42782 /* UIColor+CWAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A610844F136ED4E900D42782 /* UIColor+CWAdditions.h */; };
 		A6108459136ED4E900D42782 /* UIColor+CWAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A6108450136ED4E900D42782 /* UIColor+CWAdditions.m */; };
@@ -168,6 +169,7 @@
 		8B3096C21386662300EE9727 /* CWSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CWSearchBar.m; path = Classes/CWSearchBar.m; sourceTree = "<group>"; };
 		8B3096C31386662300EE9727 /* CWTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CWTextField.h; path = Classes/CWTextField.h; sourceTree = "<group>"; };
 		8B3096C41386662300EE9727 /* CWTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CWTextField.m; path = Classes/CWTextField.m; sourceTree = "<group>"; };
+		8B85D06E138D099A000B6C1F /* input_field_extendable.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = input_field_extendable.png; path = Resources/input_field_extendable.png; sourceTree = "<group>"; };
 		A610844E136ED4E900D42782 /* CWGeometry.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; name = CWGeometry.h; path = Classes/CWGeometry.h; sourceTree = "<group>"; };
 		A610844F136ED4E900D42782 /* UIColor+CWAdditions.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; name = "UIColor+CWAdditions.h"; path = "Classes/UIColor+CWAdditions.h"; sourceTree = "<group>"; };
 		A6108450136ED4E900D42782 /* UIColor+CWAdditions.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; name = "UIColor+CWAdditions.m"; path = "Classes/UIColor+CWAdditions.m"; sourceTree = "<group>"; };
@@ -443,6 +445,7 @@
 		A6ED92F413695C1E002DCEE4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8B85D06E138D099A000B6C1F /* input_field_extendable.png */,
 				A65D9BE1137BD56B007D25A0 /* bar_button_highlighted.png */,
 				A65D9BE2137BD56B007D25A0 /* bar_button_highlighted@2x.png */,
 				A65D9BE3137BD56B007D25A0 /* bar_button.png */,
@@ -678,6 +681,7 @@
 				A65D9BE6137BD56B007D25A0 /* bar_button_highlighted@2x.png in Resources */,
 				A65D9BE7137BD56B007D25A0 /* bar_button.png in Resources */,
 				A65D9BE8137BD56C007D25A0 /* bar_button@2x.png in Resources */,
+				8B85D06F138D099A000B6C1F /* input_field_extendable.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
