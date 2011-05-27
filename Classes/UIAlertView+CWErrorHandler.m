@@ -54,6 +54,10 @@ static NSMutableDictionary* cw_recoveryErrors = nil;
 
 +(UIAlertView*)alertViewWithError:(NSError*)error;
 {
+	if(error == nil) {
+		return nil;
+	}
+	
     BOOL hasRecoveryAttempter = [error recoveryAttempter] != nil && [[error localizedRecoveryOptions] count] > 0;
     NSString* cancelButton = hasRecoveryAttempter ? nil : NSLocalizedString(@"OK", nil);
     NSString* message = [error localizedFailureReason];
