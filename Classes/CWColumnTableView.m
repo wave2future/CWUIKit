@@ -982,6 +982,9 @@
 	NSInteger firstVisibleCell = [self firstVisiblePosition];
     NSInteger lastVisibleCell = [self lastVisiblePosition];
 	if (firstVisibleCell > _lastVisibleCell || lastVisibleCell < _firstVisibleCell) {
+		for (CWColumnTableViewCell* cell in _visibleCells) {
+			[self offerCellToReuseQueue:cell];
+		}
 		[_visibleCells release];
 		_visibleCells = nil;
 	}
