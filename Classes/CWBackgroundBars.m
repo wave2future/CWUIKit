@@ -33,16 +33,16 @@
 
 @implementation CWBackgroundNavigationBar
 
-@synthesize backgroundView = _backgroundView;
+@synthesize backgroundView = _obsoluteBackgroundView;
 
 -(void)setBackgroundView:(UIView *)view;
 {
-	if (_backgroundView) {
-    	[_backgroundView removeFromSuperview];
-        [_backgroundView release];
+	if (_obsoluteBackgroundView) {
+    	[_obsoluteBackgroundView removeFromSuperview];
+        [_obsoluteBackgroundView release];
     }
-    _backgroundView = [view retain];
-    if (_backgroundView) {
+    _obsoluteBackgroundView = [view retain];
+    if (_obsoluteBackgroundView) {
     	[self addSubview:view];
         [self setNeedsLayout];
     }
@@ -57,7 +57,7 @@
 {
 	if (_hiddenBackgroundImage != hidden) {
     	_hiddenBackgroundImage = hidden;
-        _backgroundView.hidden = hidden;
+        _obsoluteBackgroundView.hidden = hidden;
         [self setNeedsLayout];
     }
 }
@@ -67,11 +67,11 @@
 	if (animated) {
         [UIView animateWithDuration:0.2
                          animations:^{
-                             _backgroundView.alpha = hidden ? 0 : 1;
+                             _obsoluteBackgroundView.alpha = hidden ? 0 : 1;
                          }
                          completion:^(BOOL finished) {
-                             _backgroundView.alpha = 1;
-                             _backgroundView.hidden = hidden;
+                             _obsoluteBackgroundView.alpha = 1;
+                             _obsoluteBackgroundView.hidden = hidden;
                          }];
     } else {
     	self.hiddenBackgroundView = hidden;
@@ -80,7 +80,7 @@
 
 -(void)dealloc;
 {
-	[_backgroundView release];
+	[_obsoluteBackgroundView release];
     [super dealloc];
 }
 
@@ -88,7 +88,7 @@
 {
 	[super layoutSubviews];
     if (!self.hiddenBackgroundView) {
-    	[self sendSubviewToBack:_backgroundView];
+    	[self sendSubviewToBack:_obsoluteBackgroundView];
     }
 }
 
@@ -98,16 +98,16 @@
 
 @implementation CWBackgroundToolbar
 
-@synthesize backgroundView = _backgroundView;
+@synthesize backgroundView = _obsoluteBackgroundView;
 
 -(void)setBackgroundView:(UIView *)view;
 {
-	if (_backgroundView) {
-    	[_backgroundView removeFromSuperview];
-        [_backgroundView release];
+	if (_obsoluteBackgroundView) {
+    	[_obsoluteBackgroundView removeFromSuperview];
+        [_obsoluteBackgroundView release];
     }
-    _backgroundView = [view retain];
-    if (_backgroundView) {
+    _obsoluteBackgroundView = [view retain];
+    if (_obsoluteBackgroundView) {
     	[self addSubview:view];
         [self setNeedsLayout];
     }
@@ -122,7 +122,7 @@
 {
 	if (_hiddenBackgroundImage != hidden) {
     	_hiddenBackgroundImage = hidden;
-        _backgroundView.hidden = hidden;
+        _obsoluteBackgroundView.hidden = hidden;
         [self setNeedsLayout];
     }
 }
@@ -132,11 +132,11 @@
 	if (animated) {
         [UIView animateWithDuration:0.2
                          animations:^{
-                             _backgroundView.alpha = hidden ? 0 : 1;
+                             _obsoluteBackgroundView.alpha = hidden ? 0 : 1;
                          }
                          completion:^(BOOL finished) {
-                             _backgroundView.alpha = 1;
-                             _backgroundView.hidden = hidden;
+                             _obsoluteBackgroundView.alpha = 1;
+                             _obsoluteBackgroundView.hidden = hidden;
                          }];
     } else {
     	self.hiddenBackgroundView = hidden;
@@ -145,7 +145,7 @@
 
 -(void)dealloc;
 {
-	[_backgroundView release];
+	[_obsoluteBackgroundView release];
     [super dealloc];
 }
 
@@ -153,7 +153,7 @@
 {
 	[super layoutSubviews];
     if (!self.hiddenBackgroundView) {
-    	[self sendSubviewToBack:_backgroundView];
+    	[self sendSubviewToBack:_obsoluteBackgroundView];
     }
 }
 

@@ -31,9 +31,16 @@
 #import <UIKit/UIKit.h>
 
 
+/*
+Deprecation warning:
+ The functionality in these classes will be obsolete as of iOS 5.0 since
+ the new version of UIKit includes more functionality for customizing views.
+ 
+*/
+
 @interface CWBackgroundNavigationBar : UINavigationBar {
 @private
-    UIImageView* _backgroundView;
+    UIImageView* _obsoluteBackgroundView;
     BOOL _hiddenBackgroundImage;
 }
 
@@ -46,7 +53,7 @@
 
 @interface CWBackgroundToolbar : UIToolbar {
 @private
-    UIImageView* _backgroundView;
+    UIImageView* _obsoluteBackgroundView;
     BOOL _hiddenBackgroundImage;
 }
 
