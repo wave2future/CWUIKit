@@ -58,7 +58,6 @@
 		A6ED9128136947C4002DCEE4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6ED9127136947C4002DCEE4 /* CoreGraphics.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		A6ED912A136947C4002DCEE4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6ED9129136947C4002DCEE4 /* QuartzCore.framework */; };
 		A6ED912C136947C4002DCEE4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6ED912B136947C4002DCEE4 /* UIKit.framework */; };
-		A6ED9285136959B3002DCEE4 /* libCWFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A6ED9282136959A8002DCEE4 /* libCWFoundation.a */; settings = {ATTRIBUTES = (Weak, ); }; };
 		A6ED929A13695A14002DCEE4 /* CWAuxiliaryAction.h in Headers */ = {isa = PBXBuildFile; fileRef = A6ED928813695A14002DCEE4 /* CWAuxiliaryAction.h */; };
 		A6ED929B13695A14002DCEE4 /* CWAuxiliaryAction.m in Sources */ = {isa = PBXBuildFile; fileRef = A6ED928913695A14002DCEE4 /* CWAuxiliaryAction.m */; };
 		A6ED929C13695A14002DCEE4 /* CWCalloutView.h in Headers */ = {isa = PBXBuildFile; fileRef = A6ED928A13695A14002DCEE4 /* CWCalloutView.h */; };
@@ -99,26 +98,47 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		A610842F136ED42300D42782 /* PBXContainerItemProxy */ = {
+		A609632213C7C192005E7E4B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A6ED9279136959A8002DCEE4 /* CWFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteInfo = CWFoundation;
+		};
+		A609632413C7C192005E7E4B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A6ED9279136959A8002DCEE4 /* CWFoundation.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = A6B254EE136BF9E700D5F57F;
 			remoteInfo = CWNetworkMonitor;
 		};
-		A6A973141369B7150065D9BE /* PBXContainerItemProxy */ = {
+		A609632613C7C192005E7E4B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A6ED9279136959A8002DCEE4 /* CWFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A6ED914F13694AD8002DCEE4;
+			remoteInfo = UnitTests;
+		};
+		A609632813C7C192005E7E4B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A6ED9279136959A8002DCEE4 /* CWFoundation.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = A6A971981369B2D80065D9BE;
 			remoteInfo = NetworkMonitorSampleApp;
 		};
-		A6A973161369B7150065D9BE /* PBXContainerItemProxy */ = {
+		A609632A13C7C192005E7E4B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A6ED9279136959A8002DCEE4 /* CWFoundation.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = A6A971C41369B3C90065D9BE;
 			remoteInfo = XMLTranslatorSampleApp;
+		};
+		A609632D13C7C19F005E7E4B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A6ED9279136959A8002DCEE4 /* CWFoundation.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = CWFoundation;
 		};
 		A6DAA6E81383E51700518CC8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -126,27 +146,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = D2AAC07D0554694100DB518D;
 			remoteInfo = CWUIKit;
-		};
-		A6ED9281136959A8002DCEE4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A6ED9279136959A8002DCEE4 /* CWFoundation.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D2AAC07E0554694100DB518D;
-			remoteInfo = CWFoundation;
-		};
-		A6ED9283136959A8002DCEE4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A6ED9279136959A8002DCEE4 /* CWFoundation.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = A6ED914F13694AD8002DCEE4;
-			remoteInfo = UnitTests;
-		};
-		A6ED9286136959BB002DCEE4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A6ED9279136959A8002DCEE4 /* CWFoundation.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = D2AAC07D0554694100DB518D;
-			remoteInfo = CWFoundation;
 		};
 		A6ED92C213695A85002DCEE4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -214,7 +213,7 @@
 		A6ED9127136947C4002DCEE4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		A6ED9129136947C4002DCEE4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		A6ED912B136947C4002DCEE4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		A6ED9279136959A8002DCEE4 /* CWFoundation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CWFoundation.xcodeproj; path = Components/CWFoundation/CWFoundation.xcodeproj; sourceTree = "<group>"; };
+		A6ED9279136959A8002DCEE4 /* CWFoundation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CWFoundation.xcodeproj; path = ../CWFoundation/CWFoundation.xcodeproj; sourceTree = SOURCE_ROOT; };
 		A6ED928813695A14002DCEE4 /* CWAuxiliaryAction.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; name = CWAuxiliaryAction.h; path = Classes/CWAuxiliaryAction.h; sourceTree = "<group>"; };
 		A6ED928913695A14002DCEE4 /* CWAuxiliaryAction.m */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.objc; name = CWAuxiliaryAction.m; path = Classes/CWAuxiliaryAction.m; sourceTree = "<group>"; };
 		A6ED928A13695A14002DCEE4 /* CWCalloutView.h */ = {isa = PBXFileReference; fileEncoding = 5; lastKnownFileType = sourcecode.c.h; name = CWCalloutView.h; path = Classes/CWCalloutView.h; sourceTree = "<group>"; };
@@ -287,7 +286,6 @@
 				A6ED9128136947C4002DCEE4 /* CoreGraphics.framework in Frameworks */,
 				A6ED912A136947C4002DCEE4 /* QuartzCore.framework in Frameworks */,
 				A6ED912C136947C4002DCEE4 /* UIKit.framework in Frameworks */,
-				A6ED9285136959B3002DCEE4 /* libCWFoundation.a in Frameworks */,
 				A6A42D56136988B00051E0C7 /* OpenGLES.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -386,6 +384,18 @@
 			name = Classes;
 			sourceTree = "<group>";
 		};
+		A609631B13C7C192005E7E4B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A609632313C7C192005E7E4B /* libCWFoundation.a */,
+				A609632513C7C192005E7E4B /* libCWNetworkMonitor.a */,
+				A609632713C7C192005E7E4B /* UnitTests.octest */,
+				A609632913C7C192005E7E4B /* NetworkMonitorSampleApp.app */,
+				A609632B13C7C192005E7E4B /* XMLTranslatorSampleApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		A6DAA6D91383E48C00518CC8 /* ColumnTableView */ = {
 			isa = PBXGroup;
 			children = (
@@ -415,18 +425,6 @@
 				A6ED92AC13695A2A002DCEE4 /* CalloutView */,
 			);
 			name = "Sample Classes";
-			sourceTree = "<group>";
-		};
-		A6ED927A136959A8002DCEE4 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				A6ED9282136959A8002DCEE4 /* libCWFoundation.a */,
-				A6108430136ED42300D42782 /* libCWNetworkMonitor.a */,
-				A6ED9284136959A8002DCEE4 /* UnitTests.octest */,
-				A6A973151369B7150065D9BE /* NetworkMonitorSampleApp.app */,
-				A6A973171369B7150065D9BE /* XMLTranslatorSampleApp.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		A6ED92AC13695A2A002DCEE4 /* CalloutView */ = {
@@ -564,7 +562,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				A6ED9287136959BB002DCEE4 /* PBXTargetDependency */,
+				A609632E13C7C19F005E7E4B /* PBXTargetDependency */,
 				A6ED92FC13695C69002DCEE4 /* PBXTargetDependency */,
 			);
 			name = CWUIKit;
@@ -592,7 +590,7 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = A6ED927A136959A8002DCEE4 /* Products */;
+					ProductGroup = A609631B13C7C192005E7E4B /* Products */;
 					ProjectRef = A6ED9279136959A8002DCEE4 /* CWFoundation.xcodeproj */;
 				},
 			);
@@ -607,39 +605,39 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		A6108430136ED42300D42782 /* libCWNetworkMonitor.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libCWNetworkMonitor.a;
-			remoteRef = A610842F136ED42300D42782 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		A6A973151369B7150065D9BE /* NetworkMonitorSampleApp.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = NetworkMonitorSampleApp.app;
-			remoteRef = A6A973141369B7150065D9BE /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		A6A973171369B7150065D9BE /* XMLTranslatorSampleApp.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = XMLTranslatorSampleApp.app;
-			remoteRef = A6A973161369B7150065D9BE /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		A6ED9282136959A8002DCEE4 /* libCWFoundation.a */ = {
+		A609632313C7C192005E7E4B /* libCWFoundation.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libCWFoundation.a;
-			remoteRef = A6ED9281136959A8002DCEE4 /* PBXContainerItemProxy */;
+			remoteRef = A609632213C7C192005E7E4B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		A6ED9284136959A8002DCEE4 /* UnitTests.octest */ = {
+		A609632513C7C192005E7E4B /* libCWNetworkMonitor.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libCWNetworkMonitor.a;
+			remoteRef = A609632413C7C192005E7E4B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A609632713C7C192005E7E4B /* UnitTests.octest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = UnitTests.octest;
-			remoteRef = A6ED9283136959A8002DCEE4 /* PBXContainerItemProxy */;
+			remoteRef = A609632613C7C192005E7E4B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A609632913C7C192005E7E4B /* NetworkMonitorSampleApp.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = NetworkMonitorSampleApp.app;
+			remoteRef = A609632813C7C192005E7E4B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A609632B13C7C192005E7E4B /* XMLTranslatorSampleApp.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = XMLTranslatorSampleApp.app;
+			remoteRef = A609632A13C7C192005E7E4B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -740,15 +738,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		A609632E13C7C19F005E7E4B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CWFoundation;
+			targetProxy = A609632D13C7C19F005E7E4B /* PBXContainerItemProxy */;
+		};
 		A6DAA6E91383E51700518CC8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D2AAC07D0554694100DB518D /* CWUIKit */;
 			targetProxy = A6DAA6E81383E51700518CC8 /* PBXContainerItemProxy */;
-		};
-		A6ED9287136959BB002DCEE4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = CWFoundation;
-			targetProxy = A6ED9286136959BB002DCEE4 /* PBXContainerItemProxy */;
 		};
 		A6ED92C313695A85002DCEE4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -766,14 +764,8 @@
 		1DEB921F08733DC00010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				COPY_PHASE_STRIP = NO;
 				DSTROOT = /tmp/CWUIKit.dst;
-				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_MODEL_TUNING = G5;
-				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				INSTALL_PATH = /usr/local/lib;
 				PRODUCT_NAME = CWUIKit;
@@ -783,10 +775,7 @@
 		1DEB922008733DC00010E9CD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				DSTROOT = /tmp/CWUIKit.dst;
-				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				INSTALL_PATH = /usr/local/lib;
 				PRODUCT_NAME = CWUIKit;
@@ -797,6 +786,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -807,7 +797,7 @@
 				);
 				PREBINDING = NO;
 				SDKROOT = iphoneos;
-				USER_HEADER_SEARCH_PATHS = "Components/**";
+				USER_HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/**";
 			};
 			name = Debug;
 		};
@@ -824,18 +814,15 @@
 				);
 				PREBINDING = NO;
 				SDKROOT = iphoneos;
-				USER_HEADER_SEARCH_PATHS = "Components/**";
+				USER_HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/**";
 			};
 			name = Release;
 		};
 		A6DAA6C11383E41000518CC8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/UIKit.framework/Headers/UIKit.h";
 				INFOPLIST_FILE = "Sample Classes/ColumnTableView/ColumnTableViewSampleApp-Info.plist";
@@ -846,9 +833,7 @@
 					"-framework",
 					UIKit,
 				);
-				PREBINDING = NO;
 				PRODUCT_NAME = ColumnTableViewSampleApp;
-				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -856,10 +841,7 @@
 		A6DAA6C21383E41000518CC8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				COPY_PHASE_STRIP = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/UIKit.framework/Headers/UIKit.h";
@@ -871,22 +853,15 @@
 					"-framework",
 					UIKit,
 				);
-				PREBINDING = NO;
 				PRODUCT_NAME = ColumnTableViewSampleApp;
-				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				ZERO_LINK = NO;
 			};
 			name = Release;
 		};
 		A6ED92BC13695A44002DCEE4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/UIKit.framework/Headers/UIKit.h";
 				INFOPLIST_FILE = "Sample Classes/CalloutView/CalloutViewSampleApp-Info.plist";
@@ -898,19 +873,14 @@
 					"-framework",
 					UIKit,
 				);
-				PREBINDING = NO;
 				PRODUCT_NAME = CalloutViewSampleApp;
-				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
 		A6ED92BD13695A44002DCEE4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				COPY_PHASE_STRIP = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/UIKit.framework/Headers/UIKit.h";
@@ -923,22 +893,14 @@
 					"-framework",
 					UIKit,
 				);
-				PREBINDING = NO;
 				PRODUCT_NAME = CalloutViewSampleApp;
-				SDKROOT = iphoneos;
-				ZERO_LINK = NO;
 			};
 			name = Release;
 		};
 		A6ED92EF13695BD3002DCEE4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_MODEL_TUNING = G5;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				INSTALL_PATH = "$(HOME)/Library/Bundles";
 				PRODUCT_NAME = CWUIKitResources;
 				WRAPPER_EXTENSION = bundle;
@@ -948,14 +910,10 @@
 		A6ED92F013695BD3002DCEE4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				COPY_PHASE_STRIP = YES;
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				GCC_MODEL_TUNING = G5;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				INSTALL_PATH = "$(HOME)/Library/Bundles";
 				PRODUCT_NAME = CWUIKitResources;
 				WRAPPER_EXTENSION = bundle;
-				ZERO_LINK = NO;
 			};
 			name = Release;
 		};
